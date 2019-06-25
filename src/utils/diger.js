@@ -1,3 +1,10 @@
+/*---------------------------------------------------------------------------------------------
+ *  Created on 2019-6-25
+ *  Author: Hans Liu
+ *  Contact: 35127884@qq.com
+ *  Copyright (c) Hans Liu. All rights reserved.
+ *  Licensed under the GPL-3.0 License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 const puppeteer = require('puppeteer');
 async function diger(url) {
     return await puppeteer

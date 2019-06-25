@@ -7,11 +7,12 @@
   "author": "andyesfly <35127884@qq.com>",
   "license": "GPL-3.0",
   "dependencies": {
+    "moment": "^2.24.0",
     "puppeteer": "^1.18.0",
     "string-format": "^2.0.0"
   },
   "scripts": {
     "start": "node src/index.js ",
-    "test": "node test/supertest.js"
+    "test": "node test/test.js"
   }
 }
