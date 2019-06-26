@@ -14,6 +14,14 @@ let trading={
     getMonthHis:async(code)=>{
         let his_str = await diger(format(public.stock_month_his.url,code));
         return scrubber.hisFormat(his_str);
+    },
+    getWeekHis:async(code)=>{
+        let his_str=await diger(format(public.stock_week_his.url,code));
+        return scrubber.hisFormat(his_str);
+    },
+    getDailyHis:async(year,code)=>{
+        let his_str=await diger(format(public.stock_daily_his.url,year,code));
+        return scrubber.hisFormat(his_str);
     }
 }
 
