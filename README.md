@@ -7,7 +7,7 @@
 
 
 # 安装
-` npm install tushare --save `
+` cnpm install dipiper --save `
 
 使用方法   
 ```
