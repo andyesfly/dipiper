@@ -31,6 +31,25 @@ let scrubber={
         });
         result.shift();
         return result;
+    },
+    minFormat:(minData)=>{
+        let tmp = eval(minData);
+        let candles = tmp.split('\n');
+        let date_str = "20"+candles.slice(1,2)[0].substr(5); 
+        let result = candles.map(element=>{
+            if(element==="" || element.indexOf("date")>-1)
+                return;
+            let candle = element.split(" "); 
+            return {
+                date:date_str+candle[0],
+                price:candle[1],
+                volume:candle[2]
+            }
+        });
+        result.shift();
+        result.shift();
+        result.pop();
+        return result;
     }
 }
 

@@ -14,6 +14,9 @@ const data_source={
     },
     stock_month_his:{
         url:"http://data.gtimg.cn/flashdata/hushen/monthly/{}.js"
+    },
+    stock_min:{
+        url:"http://data.gtimg.cn/flashdata/hushen/minute/{}.js"
     }
 }
 

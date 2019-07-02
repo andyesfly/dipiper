@@ -22,6 +22,10 @@ let trading={
     getDailyHis:async(year,code)=>{
         let his_str=await diger(format(public.stock_daily_his.url,year,code));
         return scrubber.hisFormat(his_str);
+    },
+    getMin:async(code)=>{
+        let min_str = await diger(format(public.stock_min.url,code));
+        return scrubber.minFormat(min_str);
     }
 }
 
