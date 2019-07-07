@@ -26,8 +26,11 @@
 	]
     ```
     返回参数说明  
-    参数 | 说明
-    --- | ---
-    symbol | 带市场标识的股票代码,其他数据接口中可能会用到
-    code | 不带市场标识的补票代码
-    name | 股票名称
+    <table>
+        <thead><tr><th>参数</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td>symbol</td><td>带市场标识的股票代码,其他数据接口中可能会用到</td></tr>
+            <tr><td>code</td><td>不带市场标识的补票代码</td></tr>
+            <tr><td>name</td><td>股票名称</td></tr>
+        </tbody>
+    </table>
