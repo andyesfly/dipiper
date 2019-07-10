@@ -30,6 +30,7 @@ let scrubber={
             }
         });
         result.shift();
+        result.pop();
         return result;
     },
     minFormat:(minData)=>{

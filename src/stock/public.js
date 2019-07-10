@@ -1,10 +1,10 @@
 const data_source={
+    prefix:{
+        sh:"sh",
+        sz:"sz"
+    },
     stock_list:{
         url:"http://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/Market_Center.getHQNodeData?page={}&num=200&sort=symbol&asc=1&node=hs_a&_s_r_a=init",
-        prefix:{
-            6:"sh",
-            0:"sz"
-        }
     },
     stock_daily_his:{
         url:"http://data.gtimg.cn/flashdata/hushen/daily/{0}/{1}.js"
@@ -17,6 +17,9 @@ const data_source={
     },
     stock_min:{
         url:"http://data.gtimg.cn/flashdata/hushen/minute/{}.js"
+    },
+    stock_issue:{
+        url:"http://vip.stock.finance.sina.com.cn/corp/go.php/vISSUE_NewStock/stockid/{}.phtml"
     }
 }
 
