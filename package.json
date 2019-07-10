@@ -1,7 +1,7 @@
 {
   "name": "dipiper",
-  "version": "1.0.0",
-  "description": "实现对股票、基金等金融数据从数据采集、清洗加工 到 数据存储过程的工具，满足金融量化分析师和学习数据分析的人在数据获取方面的需求",
+  "version": "1.0.3",
+  "description": "基于nodejs的股票数据接口",
   "main": "src/index.js",
   "repository": "git@github.com:andyesfly/dipiper.git",
   "author": "andyesfly <35127884@qq.com>",

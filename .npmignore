@@ -37,7 +37,7 @@ node_modules/
 jspm_packages/
 .vscode/
 test/
-
+docs/
 # TypeScript v1 declaration files
 typings/
 
