@@ -3,7 +3,7 @@
     获取个股日线历史数据，从上市之日开始至最近收市日的所有日K线数据,按年份获取。
 - 接口调用说明
     ``` javascript
-    stock.trading.getDailyHis("17","sh600005").then((data)=>{
+    dip.stock.trading.getDailyHis("17","sh600005").then((data)=>{
         //数据存储、处理逻辑，请自行实现
     });
     ```
@@ -58,7 +58,7 @@
     获取个股周线历史数据
 - 接口调用说明
     ``` javascript
-    stock.trading.getWeekHis("sh600005").then((data)=>{
+    dip.stock.trading.getWeekHis("sh600005").then((data)=>{
         //数据存储、处理逻辑，请自行实现
     });
     ```
@@ -80,7 +80,7 @@
     获取个股月线历史数据
 - 接口调用说明
     ``` javascript
-    stock.trading.getMonthHis("sh600005").then((data)=>{
+    dip.stock.trading.getMonthHis("sh600005").then((data)=>{
         //数据存储、处理逻辑，请自行实现
     });
     ```
@@ -102,7 +102,7 @@
     获取个股当日分时数据
 - 接口调用说明
     ``` javascript
-    stock.trading.getMin("sh600005").then((data)=>{
+    dip.stock.trading.getMin("sh600005").then((data)=>{
         //数据存储、处理逻辑，请自行实现
     });
     ```
