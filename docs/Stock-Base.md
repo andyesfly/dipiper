@@ -109,3 +109,66 @@
             <tr><td>launch_date</td><td>上市日期</td></tr>
         </tbody>
     </table>
+
+## 行业板块列表
+- 接口用途  
+    获取沪深A股行业板块列表
+- 调用说明  
+``` javascript
+dip.stock.symbols.getIndustryList().then((data)=>{
+    //数据存储、处理逻辑，请自行实现
+})
+```
+- 参数说明  
+    没有输入参数
+- 返回说明 正常时的返回JSON数据包示例：  
+``` json
+[
+	{
+		"code": "BK0735",
+		"name": "安防设备"
+	},
+	{
+		"code": "BK0546",
+		"name": "玻璃陶瓷"
+    }
+    ...
+]
+```
+返回参数说明  
+
+     <table>
+        <thead><tr><th>参数</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td>code</td><td>行业代码</td></tr>
+            <tr><td>name</td><td>行业名称</td></tr>
+        </tbody>
+    </table>
+
+## 概念板块列表
+- 接口用途  
+    获取沪深A股概念板块列表
+- 调用说明  
+``` javascript
+dip.stock.symbols.getConceptList().then((data)=>{
+    //数据存储、处理逻辑，请自行实现
+})
+```
+- 参数说明  
+    没有输入参数
+- 返回说明 正常时的返回JSON数据包示例：  
+同行业板块
+
+## 地域板块列表
+- 接口用途  
+    获取沪深A股地域板块列表
+- 调用说明  
+``` javascript
+dip.stock.symbols.getAreaList().then((data)=>{
+    //数据存储、处理逻辑，请自行实现
+})
+```
+- 参数说明  
+    没有输入参数
+- 返回说明 正常时的返回JSON数据包示例：  
+同行业板块

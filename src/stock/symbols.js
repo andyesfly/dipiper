@@ -77,6 +77,54 @@ let symbols = {
             ]
         }
         return await diger(format(public.stock_issue.url, code), options);
+    },
+    /**
+     * @returns 行业板块列表
+     */
+    getIndustryList:async ()=>{
+        let list_str = await diger(public.stock_board.url);
+        let list_obj = eval(list_str);
+        let industries = list_obj.filter(e=>e.key==="hsbroad")[0].next.filter(e=>e.key==="industry_board")[0].next;
+        let result = industries.map(ele=>{
+            let industry = {
+                code: ele.key.split(".")[1],
+                name: ele.title
+            }
+            return industry;
+        })
+        return result;
+    },
+    /**
+     * @returns 概念板块列表
+     */
+    getConceptList: async ()=>{
+        let list_str = await diger(public.stock_board.url);
+        let list_obj = eval(list_str);
+        let concepts = list_obj.filter(e=>e.key==="hsbroad")[0].next.filter(e=>e.key==="concept_board")[0].next;
+        let result = concepts.map(ele=>{
+            let concept = {
+                code: ele.key.split(".")[1],
+                name: ele.title
+            }
+            return concept;
+        })
+        return result;
+    },
+    /**
+     * @returns 地域板块列表
+     */
+    getAreaList: async ()=>{
+        let list_str = await diger(public.stock_board.url);
+        let list_obj = eval(list_str);
+        let concepts = list_obj.filter(e=>e.key==="hsbroad")[0].next.filter(e=>e.key==="region_board")[0].next;
+        let result = concepts.map(ele=>{
+            let concept = {
+                code: ele.key.split(".")[1],
+                name: ele.title
+            }
+            return concept;
+        })
+        return result;
     }
 }
 
