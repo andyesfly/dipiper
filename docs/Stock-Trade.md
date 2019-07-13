@@ -16,8 +16,6 @@
         </tbody>
     </table>
 
-
-
 - 返回说明 正常时的返回JSON数据包示例：
     ``` json
     [
@@ -139,3 +137,13 @@
             <tr><td>volume</td><td>分时成交量</td></tr>
         </tbody>
     </table>
+
+## 获取指数历史数据  
+调用方法同日线、周线、月线历史数据
+- 参数说明
+<table>
+    <thead><tr><th>参数</th><th>说明</th></tr></thead>
+    <tbody>
+        <tr><td>code</td><td>指数代码（上证指数：sh000001，沪深300：sh000300，深圳成指：sz399001，中小板指：sz399005，创业板指：sz399006）</td></tr>
+    </tbody>
+</table>
