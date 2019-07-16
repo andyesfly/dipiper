@@ -3,6 +3,7 @@
 
     - [基础数据](Stock-Base.md)
     - [交易数据](Stock-Trade.md)
+    - [指数](Stock_Index.md)
     - [财务数据](Stock-Finance.md)
 - 基金
 

@@ -19,7 +19,7 @@ async function diger(url, options) {
             // await page.content().then((v)=>{   console.log(v); })
             if (!options) {
                 let r = await page.$$eval('pre', pre => pre[0].innerHTML);
-                let ro = eval(r);
+                // let ro = eval(r);
                 await browser.close();
                 return r;
             } else {

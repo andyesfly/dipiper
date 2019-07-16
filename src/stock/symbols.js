@@ -79,7 +79,7 @@ let symbols = {
         return await diger(format(public.stock_issue.url, code), options);
     },
     /**
-     * @returns 行业板块列表
+     * @returns {json} 行业板块列表
      */
     getIndustryList:async ()=>{
         let list_str = await diger(public.stock_board.url);
@@ -95,7 +95,7 @@ let symbols = {
         return result;
     },
     /**
-     * @returns 概念板块列表
+     * @returns {json} 概念板块列表
      */
     getConceptList: async ()=>{
         let list_str = await diger(public.stock_board.url);
@@ -111,7 +111,7 @@ let symbols = {
         return result;
     },
     /**
-     * @returns 地域板块列表
+     * @returns {json} 地域板块列表
      */
     getAreaList: async ()=>{
         let list_str = await diger(public.stock_board.url);
