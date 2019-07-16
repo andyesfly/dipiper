@@ -62,7 +62,7 @@ dip.stock.index.getDailyHis("BK0447").then(data=>{
 ## 指数周线数据
 
 - 接口用途  
-    获取指数日线历史数据
+    获取指数周线历史数据
 - 接口调用说明  
 ``` javascript
 dip.stock.index.getWeekHis("BK0447").then(data=>{
@@ -77,7 +77,7 @@ dip.stock.index.getWeekHis("BK0447").then(data=>{
 ## 指数月线数据
 
 - 接口用途  
-    获取指数日线历史数据
+    获取指数月线历史数据
 - 接口调用说明  
 ``` javascript
 dip.stock.index.getMonthHis("BK0447").then(data=>{
