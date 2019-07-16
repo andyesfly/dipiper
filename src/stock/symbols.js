@@ -125,6 +125,23 @@ let symbols = {
             return concept;
         })
         return result;
+    },
+    /**
+     * @param {code} 股票代码
+     * @returns {json} 所属板块
+     */
+    getBoards: async (code)=>{
+        let market = code.substring(0,1)==="6"?1:0;
+        let list_str = await diger(format(public.stock_sboard.url,market,code));
+        let his_obj = JSON.parse(list_str.substring(list_str.indexOf("(")+1,list_str.length-2));
+        let result = [];
+        for(var b in his_obj.data.diff){
+            result.push( {
+                code:his_obj.data.diff[b].f12,
+                name:his_obj.data.diff[b].f14
+            })
+        };
+        return result;
     }
 }
 

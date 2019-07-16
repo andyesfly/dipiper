@@ -88,3 +88,42 @@ dip.stock.index.getMonthHis("BK0447").then(data=>{
     同日线
 - 返回说明 正常时的返回JSON数据包示例：  
     同日线
+
+## 指数成分
+
+- 接口用途
+    获取指数成份股列表
+- 接口调用说明
+``` javascript
+dip.stock.index.getComponents("BK0447").then(data=>{
+    //数据存储、处理逻辑，请自行实现
+})
+``` 
+- 参数说明
+    同日线
+- 返回说明 正常时的返回JSON数据包示例： 
+``` json
+[
+	{
+		"code": "300785",
+		"name": "值得买"
+	},
+	{
+		"code": "600870",
+		"name": "ST厦华"
+	},
+	{
+		"code": "002769",
+		"name": "普路通"
+    }
+    ...
+]
+```
+返回参数说明  
+     <table>
+        <thead><tr><th>参数</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td>code</td><td>股票代码</td></tr>
+            <tr><td>name</td><td>股票名称</td></tr>
+        </tbody>
+    </table>

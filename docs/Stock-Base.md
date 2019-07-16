@@ -35,7 +35,7 @@
         <thead><tr><th>参数</th><th>说明</th></tr></thead>
         <tbody>
             <tr><td>symbol</td><td>带市场标识的股票代码,其他数据接口中可能会用到</td></tr>
-            <tr><td>code</td><td>不带市场标识的补票代码</td></tr>
+            <tr><td>code</td><td>不带市场标识的股票代码</td></tr>
             <tr><td>name</td><td>股票名称</td></tr>
         </tbody>
     </table>
@@ -172,3 +172,45 @@ dip.stock.symbols.getAreaList().then((data)=>{
     没有输入参数
 - 返回说明 正常时的返回JSON数据包示例：  
 同行业板块
+
+## 个股所属板块
+
+- 接口用途  
+    获取个股所属板块列表
+- 调用说明  
+``` javascript 
+dip.stock.symbols.getBoards("600005").then((data)=>{
+    //数据存储、处理逻辑，请自行实现
+});
+```
+- 参数说明  
+    <table>
+        <thead><tr><th>参数</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td>code</td><td>股票代码</td></tr>
+        </tbody>
+    </table>
+- 返回说明 正常时的返回JSON数据包示例： 
+``` json
+[
+	{
+		"code": "BK0479",
+		"name": "钢铁行业"
+	},
+	{
+		"code": "BK0157",
+		"name": "湖北板块"
+	}
+]
+```
+返回参数说明  
+
+     <table>
+        <thead><tr><th>参数</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td>code</td><td>板块代码</td></tr>
+            <tr><td>name</td><td>板块名称</td></tr>
+        </tbody>
+    </table>
+
+
