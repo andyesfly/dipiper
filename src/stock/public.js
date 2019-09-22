@@ -37,6 +37,9 @@ const data_source={
             week: 102,
             month:103
         }
+    },
+    stock_guidline:{
+        url:"http://money.finance.sina.com.cn/corp/go.php/vFD_FinancialGuideLine/stockid/{0}/ctrl/{1}/displaytype/4.phtml"
     }
 }
 

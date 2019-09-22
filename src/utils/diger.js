@@ -12,42 +12,111 @@ async function diger(url, options) {
         .launch()
         .then(async browser => {
             const page = await browser.newPage();
-
-            // page.on('request', async req => {     if (req.resourceType() === 'xhr') {
-            //     console.log(req.url());     } });
             await page.goto(url);
-            // await page.content().then((v)=>{   console.log(v); })
+
             if (!options) {
                 let r = await page.$$eval('pre', pre => pre[0].innerHTML);
-                // let ro = eval(r);
                 await browser.close();
                 return r;
             } else {
                 let tags = options.tags;
-                let result = [];
+                let tag_values = {};
                 for (i = 0; i < tags.length; i++) {
-                    let params = tags[i].params;
-                    let tagValues = {};
-                    for (j = 0; j < params.length; j++) {
-                        if (params[j].type === "enum") {
-                            for (k = params[j].start; k <= params[j].end; k++) {
-                                let aliasIndex = k - params[j].start;
-                                let xpath = format(tags[i].xpath, k);
-                                var elehandles = await page.$x(xpath);
+                    let xpath = tags[i].xpath;
+                    let values = tags[i].values;
+                    let vappend = "append" in xpath.param?xpath.param.append:[];
+                    let value_groups = [];
+                    tag_values[tags[i].name]=value_groups;
+
+                    for (j = xpath.param.start; j < xpath.param.end; j++) {
+                        if(xpath.param.exclude && xpath.param.exclude.indexOf(j)>=0)
+                            continue;
+                        let x = "";
+
+                        if(xpath.param.type==="group"){
+                            if(value_groups[j-xpath.param.start])
+                                value_groups.push({});
+
+                            if(vappend){
+                                for(ai=0;ai<vappend.length;ai++){
+                                    x=format(xpath.path,vappend[ai].index,k);
+                                    let aphandles = await page.$x(x);
+                                    for(ei=0;ei<aphandles.length;ei++){
+                                        value_groups[j-xpath.param.start][vappend[ai].name] = await page.evaluate(ele => ele.textContent,elehandles[ei]);
+                                    }
+                                }
+                            }
+
+                            if(xpath.param.child){
+                                let pChild = xpath.param.child;
+                                for(k=pChild.start;k<pChild.end;k++){
+                                    
+                                    x = format(xpath.path, j,k);
+                                    let elehandles = await page.$x(x);
+                                    for(ei=0;ei<elehandles.length;ei++){
+                                        value_groups[j-xpath.param.start][values[j-xpath.param.start]] = await page.evaluate(ele => ele.textContent,elehandles[ei]);
+                                    }
+                                }
+                            }
+                            else{
+                                if(!value_groups[0])
+                                    value_groups.push({});
+                                x = format(xpath.path,j);
+                                let elehandles = await page.$x(x);
                                 for(ei=0;ei<elehandles.length;ei++){
-                                    tagValues[tags[i].alias[aliasIndex]] = await page.evaluate(ele => ele.textContent,elehandles[ei]);
+                                    value_groups[0][values[j-xpath.param.start]] = await page.evaluate(ele => ele.textContent,elehandles[ei]);
+                                }
+                            }
+                        }
+                        else{
+                            if(xpath.param.child){
+                                let pChild = xpath.param.child;
+                                if(pChild.type ==="group"){
+                                    for(k=pChild.start;k<pChild.end;k++){
+                                        if(!value_groups[k-pChild.start])
+                                            value_groups.push({});
+                                        if(vappend){
+                                            for(ai=0;ai<vappend.length;ai++){
+                                                x=format(xpath.path,vappend[ai].index,k);
+                                                let aphandles = await page.$x(x);
+                                                for(ei=0;ei<aphandles.length;ei++){
+                                                    value_groups[k-pChild.start][vappend[ai].name] = await page.evaluate(ele => ele.textContent,aphandles[ei]);
+                                                }
+                                            }
+                                        }
+                                        x = format(xpath.path, j,k);
+                                        let elehandles = await page.$x(x);
+                                        for(ei=0;ei<elehandles.length;ei++){
+                                            value_groups[k-pChild.start][values[j-xpath.param.start]] = await page.evaluate(ele => ele.textContent,elehandles[ei]);
+                                        }
+                                    }
+                                }
+                                else{
+                                    if(!value_groups[0])
+                                        value_groups.push({});
+                                    x = format(xpath.path,j);
+                                    let elehandles = await page.$x(x);
+                                    for(ei=0;ei<elehandles.length;ei++){
+                                        value_groups[0][values[j-xpath.param.start]] = await page.evaluate(ele => ele.textContent,elehandles[ei]);
+                                    }
+                                }
+                            }
+                            else{
+                                if(!value_groups[0])
+                                    value_groups.push({});
+                                x = format(xpath.path,j);
+                                let elehandles = await page.$x(x);
+                                for(ei=0;ei<elehandles.length;ei++){
+                                    value_groups[0][values[j-xpath.param.start]] = await page.evaluate(ele => ele.textContent,elehandles[ei]);
                                 }
                             }
                         }
                     }
-                    result.push(tagValues);
                 }
                 
                 await browser.close();
-                return result;
+                return tag_values;
             }
-            // console.log(r); other actions...
-            // await browser.close();
         });
 }
 module.exports = diger;

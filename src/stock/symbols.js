@@ -46,7 +46,8 @@ let symbols = {
         let options = {
             tags: [
                 {
-                    alias: [
+                    name:"stock_issue",
+                    values: [
                         "market",
                         "consignee",
                         "underwriting",
@@ -65,14 +66,15 @@ let symbols = {
                         "announcement_date",
                         "launch_date"
                     ],
-                    xpath: "//div[@id='center']//tr[{}]//td[2]",
-                    params: [
-                        {
-                            type: "enum",
-                            start: 1,
-                            end: 17
+                    xpath: {
+                        path:"//div[@id='center']//tr[{}]//td[2]",
+                        param: {
+                            type: "value",
+                            start:1,
+                            end:18
                         }
-                    ]
+                        
+                    }
                 }
             ]
         }

@@ -62,27 +62,29 @@
 - 返回说明 正常时的返回JSON数据包示例：
 
     ``` json
-    [
-        {
-            "market": "深圳证券交易所",
-            "consignee": "南方证券股份有限公司",
-            "underwriting": "余额包销",
-            "sponsor": "南方证券有限公司",
-            "issue_price": "16.80",
-            "issue_mode": "网下询价配售、网上定价发行",
-            "issue_p/e": "--",
-            "pre_capital": "48,955.40",
-            "capital": "54,955.40",
-            "issue_volume": "6,000.00",
-            "expected_fundraising": "100,800.00",
-            "fundraising": "100,800.00",
-            "issue_cost": "3,310.00",
-            "net_amount_raised": "97,490.00",
-            "underwriting_fee": "--",
-            "announcement_date": "2000-12-11",
-            "launch_date": "2001-01-12"
-        }
-    ]
+    {
+        "stock_issue": [
+            {
+                "market": "深圳证券交易所",
+                "consignee": "南方证券股份有限公司",
+                "underwriting": "余额包销",
+                "sponsor": "南方证券有限公司",
+                "issue_price": "16.80",
+                "issue_mode": "网下询价配售、网上定价发行",
+                "issue_p/e": "--",
+                "pre_capital": "48,955.40",
+                "capital": "54,955.40",
+                "issue_volume": "6,000.00",
+                "expected_fundraising": "100,800.00",
+                "fundraising": "100,800.00",
+                "issue_cost": "3,310.00",
+                "net_amount_raised": "97,490.00",
+                "underwriting_fee": "--",
+                "announcement_date": "2000-12-11",
+                "launch_date": "2001-01-12"
+            }
+        ]
+    }
     ```
 
     返回参数说明  
