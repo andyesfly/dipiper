@@ -416,6 +416,95 @@
             </tbody>
         </table>
     - 普通工商业
-    
+        <table>
+            <thead><tr><th>参数</th><th>说明</th></tr></thead>
+            <tbody>
+                <tr style="font-weight: bold;"><td>current_assets</td><td>流动资产</td></tr>
+                <tr><td>monetary_capital</td><td>货币资金</td></tr>
+                <tr><td>trading_fin_assets</td><td>交易性金融资产</td></tr>
+                <tr><td>derivative_fin_assets</td><td>衍生金融资产</td></tr>
+                <tr><td>receivables_amount</td><td>应收票据及应收账款</td></tr>
+                <tr><td>bill_receivables</td><td>应收票据</td></tr>
+                <tr><td>receivables</td><td>应收账款</td></tr>
+                <tr><td>prepayment</td><td>预付款项</td></tr>
+                <tr><td>interest_receivable</td><td>应收利息</td></tr>
+                <tr><td>dividends_receivable</td><td>应收股利</td></tr>
+                <tr><td>other_receivables</td><td>其他应收款</td></tr>
+                <tr><td>repo_financial_asset</td><td>买入返售金融资产</td></tr>
+                <tr><td>inventory</td><td>存货</td></tr>
+                <tr><td>assets_held_for_sale</td><td>划分为持有待售的资产</td></tr>
+                <tr><td>nc-assets_due_in_1year</td><td>一年内到期的非流动资产</td></tr>
+                <tr><td>prepaid_expense</td><td>待摊费用</td></tr>
+                <tr><td>unsettled</td><td>待处理流动资产损益</td></tr>
+                <tr><td>other_current_assets</td><td>其他流动资产</td></tr>
+                <tr><td>current_assets_amount</td><td>流动资产合计</td></tr>
+                <tr style="font-weight: bold;"><td>illiquid_assets</td><td>非流动资产</td></tr>
+                <tr><td>loans_and_payments</td><td>发放贷款及垫款</td></tr>
+                <tr><td>sales_for_fin_asset</td><td>可供出售金融资产</td></tr>
+                <tr><td>hold_investment_due</td><td>持有至到期投资</td></tr>
+                <tr><td>long_term_receivables</td><td>长期应收款</td></tr>
+                <tr><td>long_term_equity_investment</td><td>长期股权投资</td></tr>
+                <tr><td>investment_property</td><td>投资性房地产</td></tr>
+                <tr><td>net_fixed_assets</td><td>固定资产净额</td></tr>
+                <tr><td>construction_in_process</td><td>在建工程</td></tr>
+                <tr><td>engineering_material</td><td>工程物资</td></tr>
+                <tr><td>liquidation_of_fixed_assets</td><td>固定资产清理</td></tr>
+                <tr><td>productive_biological_asset</td><td>生产性生物资产</td></tr>
+                <tr><td>non-profit_living_assets</td><td>公益性生物资产</td></tr>
+                <tr><td>oil_and_gas_assets</td><td>油气资产</td></tr>
+                <tr><td>intangible_assets</td><td>无形资产</td></tr>
+                <tr><td>development_expenditure</td><td>开发支出</td></tr>
+                <tr><td>goodwill</td><td>商誉</td></tr>
+                <tr><td>deferred_assets</td><td>长期待摊费用</td></tr>
+                <tr><td>deferred_tax_assets</td><td>递延所得税资产</td></tr>
+                <tr><td>other_non-current_assets</td><td>其他非流动资产</td></tr>
+                <tr><td>total_non-current_assets</td><td>非流动资产合计</td></tr>
+                <tr><td>total_assets</td><td>资产总计</td></tr>
+                <tr style="font-weight: bold;"><td>current_liabilities</td><td>流动负债</td></tr>
+                <tr><td>short_term_borrowing</td><td>短期借款</td></tr>
+                <tr><td>trading_fin_liabilities</td><td>交易性金融负债</td></tr>
+                <tr><td>notes_accounts_payable</td><td>应付票据及应付账款</td></tr>
+                <tr><td>notes_payable</td><td>应付票据</td></tr>
+                <tr><td>accounts_payable</td><td>应付账款</td></tr>
+                <tr><td>advance_receipt</td><td>预收款项</td></tr>
+                <tr><td>commission_payable</td><td>应付手续费及佣金</td></tr>
+                <tr><td>payroll_payable</td><td>应付职工薪酬</td></tr>
+                <tr><td>tax_payable</td><td>应交税费</td></tr>
+                <tr><td>interest_payable</td><td>应付利息</td></tr>
+                <tr><td>dividends_payable</td><td>应付股利</td></tr>
+                <tr><td>other_payables</td><td>其他应付款</td></tr>
+                <tr><td>accrued_expenses</td><td>预提费用</td></tr>
+                <tr><td>deferred_earnings_in_1year</td><td>一年内的递延收益</td></tr>
+                <tr><td>short_term_bond</td><td>应付短期债券</td></tr>
+                <tr><td>nc-liabilities_due_in_1year</td><td>一年内到期的非流动负债</td></tr>
+                <tr><td>other_current_liability</td><td>其他流动负债</td></tr>
+                <tr><td>total_current_liability</td><td>流动负债合计</td></tr>
+                <tr style="font-weight: bold;"><td>non-current_liability</td><td>非流动负债</td></tr>
+                <tr><td>long_term_loan</td><td>长期借款</td></tr>
+                <tr><td>bonds_payable</td><td>应付债券</td></tr>
+                <tr><td>long_term_payable</td><td>长期应付款</td></tr>
+                <tr><td>long_term_payroll_payable</td><td>长期应付职工薪酬</td></tr>
+                <tr><td>special_payable</td><td>专项应付款</td></tr>
+                <tr><td>estimated_nc_liabilities</td><td>预计非流动负债</td></tr>
+                <tr><td>deferred_tax_liabilities</td><td>递延所得税负债</td></tr>
+                <tr><td>long_term_deferred_earnings</td><td>长期递延收益</td></tr>
+                <tr><td>other_nc_liabilities</td><td>其他非流动负债</td></tr>
+                <tr><td>total_nc_liabilities</td><td>非流动负债合计</td></tr>
+                <tr><td>total_liability</td><td>负债合计</td></tr>
+                <tr style="font-weight: bold;"><td>owner's_equity</td><td>所有者权益</td></tr>
+                <tr><td>paid-up_or_share_capital</td><td>实收资本(或股本)</td></tr>
+                <tr><td>capital_reserve</td><td>资本公积金</td></tr>
+                <tr><td>less:_treasury_shares</td><td>减：库存股</td></tr>
+                <tr><td>other_comprehensive_income</td><td>其他综合收益</td></tr>
+                <tr><td>special_reserves</td><td>专项储备</td></tr>
+                <tr><td>surplus_reserve</td><td>盈余公积</td></tr>
+                <tr><td>general_risk_preparation</td><td>一般风险准备</td></tr>
+                <tr><td>undistributed_profit</td><td>未分配利润</td></tr>
+                <tr><td>total_sea_to_parent_company</td><td>归属于母公司股东权益合计</td></tr>
+                <tr><td>minority_shareholders'_equity</td><td>少数股东权益</td></tr>
+                <tr><td>total_equity</td><td>所有者权益(或股东权益)合计</td></tr>
+                <tr><td>total_liabilities_and_equity</td><td>负债和所有者权益(或股东权益)总计</td></tr>
+            </tbody>
+        </table>
 
 
