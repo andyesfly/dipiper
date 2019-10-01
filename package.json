@@ -1,6 +1,6 @@
 {
   "name": "dipiper",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "基于nodejs的股票数据接口",
   "main": "src/index.js",
   "repository": "git@github.com:andyesfly/dipiper.git",

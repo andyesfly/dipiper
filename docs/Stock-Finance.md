@@ -13,7 +13,7 @@
         <thead><tr><th>参数</th><th>说明</th></tr></thead>
         <tbody>
             <tr><td>code</td><td>股票代码（不带市场标识）</td></tr>
-            <tr><td>code</td><td>年份</td></tr>
+            <tr><td>year</td><td>年份</td></tr>
         </tbody>
     </table>
 - 返回说明
@@ -32,30 +32,6 @@
                 "OCFPS": "4.4784",
                 "CRPS": "0.0155",
                 "UDPPS": "13.6209"
-            },
-            {
-                "Date": "2018-09-30",
-                "Diluted_EPS": "3.5309",
-                "EPSWA": "3.51",
-                "AEPS": "3.51",
-                "EPS_NGOL": "--",
-                "BPS": "14.6365",
-                "BPS_Adjusted": "14.4098",
-                "OCFPS": "2.5057",
-                "CRPS": "0.0173",
-                "UDPPS": "12.7763"
-            },
-            {
-                "Date": "2018-06-30",
-                "Diluted_EPS": "2.1419",
-                "EPSWA": "2.13",
-                "AEPS": "2.13",
-                "EPS_NGOL": "2.1",
-                "BPS": "13.2392",
-                "BPS_Adjusted": "13.0198",
-                "OCFPS": "1.486",
-                "CRPS": "0.0173",
-                "UDPPS": "11.3945"
             }
         ],
         "profitability": [
@@ -81,52 +57,6 @@
                 "ROE": "28.69",
                 "ROEWA": "33.36",
                 "NPAD": "25580865501.38"
-            },
-            {
-                "Date": "2018-09-30",
-                "OROA": "8.5814",
-                "OPE": "29.2972",
-                "PROA": "9.1855",
-                "ROPTC": "20.9497",
-                "OPR": "16.7768",
-                "COGSTS": "69.8466",
-                "PMOS": "14.2846",
-                "DOE": "353.091",
-                "ROC": "24.1241",
-                "ROA": "8.5814",
-                "SGPR": "30.1534",
-                "POTE": "10.0719",
-                "NMP": "1.3664",
-                "POMP": "173.1306",
-                "RR": "--",
-                "ROI": "--",
-                "GP": "43564580480.6",
-                "ROE": "24.36",
-                "ROEWA": "27.76",
-                "NPAD": "21345703240.01"
-            },
-            {
-                "Date": "2018-06-30",
-                "OROA": "5.8819",
-                "OPE": "29.1896",
-                "PROA": "5.9375",
-                "ROPTC": "19.9461",
-                "OPR": "16.6022",
-                "COGSTS": "69.9735",
-                "PMOS": "14.1634",
-                "DOE": "390.6459",
-                "ROC": "29.5067",
-                "ROA": "10.7274",
-                "SGPR": "30.0265",
-                "POTE": "13.5287",
-                "NMP": "5.277",
-                "POMP": "173.5168",
-                "RR": "0.0001",
-                "ROI": "--",
-                "GP": "26555584567.54",
-                "ROE": "16.35",
-                "ROEWA": "17.8",
-                "NPAD": "12632290055.79"
             }
         ],
         "growth_ability": [
@@ -136,20 +66,6 @@
                 "NPGR": "17.1953",
                 "GRNA": "38.7222",
                 "GRTA": "16.8705"
-            },
-            {
-                "Date": "2018-09-30",
-                "MBRG": "34.1142",
-                "NPGR": "36.7474",
-                "GRNA": "47.3861",
-                "GRTA": "12.1414"
-            },
-            {
-                "Date": "2018-06-30",
-                "MBRG": "31.4978",
-                "NPGR": "35.5871",
-                "GRNA": "48.7177",
-                "GRTA": "7.0822"
             }
         ],
         "operation_ability": [
@@ -164,30 +80,6 @@
                 "TATD": "423.5792",
                 "CATA": "1.0673",
                 "DCAT": "337.2997"
-            },
-            {
-                "Date": "2018-09-30",
-                "ART": "23.9504",
-                "DSO": "11.2733",
-                "DSI": "36.6948",
-                "RST": "7.358",
-                "TFA": "--",
-                "TATO": "0.643",
-                "TATD": "419.9067",
-                "CATA": "0.8058",
-                "DCAT": "335.0707"
-            },
-            {
-                "Date": "2018-06-30",
-                "ART": "11.7758",
-                "DSO": "15.2856",
-                "DSI": "41.9659",
-                "RST": "4.2892",
-                "TFA": "5.2485",
-                "TATO": "0.4192",
-                "TATD": "429.3893",
-                "CATA": "0.5304",
-                "DCAT": "339.3665"
             }
         ],
         "debt_decapital_structure": [
@@ -211,48 +103,6 @@
                 "POFA": "7.321",
                 "LEV": "63.0963",
                 "ASSET": "251234157276.81"
-            },
-            {
-                "Date": "2018-09-30",
-                "AR": "1.2444",
-                "QR": "1.171",
-                "CR": "65.6852",
-                "ICR": "-3513.3509",
-                "LDWCR": "--",
-                "EAR": "35.5721",
-                "LDR": "--",
-                "REFA": "--",
-                "DER": "181.1192",
-                "RLALF": "--",
-                "MCR": "--",
-                "FANWR": "--",
-                "CIR": "56.7605",
-                "ER": "180.2878",
-                "LVR": "--",
-                "POFA": "--",
-                "LEV": "64.4279",
-                "ASSET": "247522819968.7"
-            },
-            {
-                "Date": "2018-06-30",
-                "AR": "1.2366",
-                "QR": "1.142",
-                "CR": "73.492",
-                "ICR": "-4754.3087",
-                "LDWCR": "--",
-                "EAR": "36.3559",
-                "LDR": "--",
-                "REFA": "463.683",
-                "DER": "175.0588",
-                "RLALF": "--",
-                "MCR": "--",
-                "FANWR": "61.8049",
-                "CIR": "59.6854",
-                "ER": "174.1715",
-                "LVR": "--",
-                "POFA": "7.8407",
-                "LEV": "63.6441",
-                "ASSET": "219066763651.75"
             }
         ],
         "cash_flow": [
@@ -263,22 +113,6 @@
                 "NOCFTNP": "1.0213",
                 "NOCFTDR": "0.17",
                 "CFR": "17.0851"
-            },
-            {
-                "Date": "2018-09-30",
-                "NOCFTSR": "0.1014",
-                "ROOCFOA": "0.0609",
-                "NOCFTNP": "0.7097",
-                "NOCFTDR": "0.0945",
-                "CFR": "9.4958"
-            },
-            {
-                "Date": "2018-06-30",
-                "NOCFTSR": "0.0983",
-                "ROOCFOA": "0.0408",
-                "NOCFTNP": "0.6937",
-                "NOCFTDR": "0.0641",
-                "CFR": "6.4442"
             }
         ]
     }
@@ -362,3 +196,226 @@
             <tr><td>CFR</td><td>现金流量比率(%)</td></tr>
         </tbody>
     </table>
+
+## 资产负债表
+- 接口用途
+    获取个股资产负债表，根据行业划分，包括4类返回结果：银行、保险、证券、普通工商业
+- 接口调用说明
+    ``` javascript
+        dip.stock.finance.getBalanceSheet("000651","2018","bank").then(data=>{
+            //数据存储、处理逻辑，请自行实现
+        })
+    ```
+- 参数说明
+    <table>
+        <thead><tr><th>参数</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td>code</td><td>股票代码（不带市场标识）</td></tr>
+            <tr><td>year</td><td>年份</td></tr>
+            <tr><td>company_type</td><td>公司类型（bank:银行，insurance:保险，security:证券，general）</td></tr>
+        </tbody>
+    </table>
+- 返回说明
+    返回数据依旧是JSON格式，由于数据字段较多，这里不在给出返回数据实例，字段说明参考如下返回参数说明。
+    
+    返回参数说明
+    - 银行
+        <table>
+            <thead><tr><th>参数</th><th>说明</th></tr></thead>
+            <tbody>
+                <tr style="font-weight: bold;"><td>asset</td><td>资产</td></tr>
+                <tr><td>cash_deposit</td><td>现金及存放中央银行款项</td></tr>
+                <tr><td>bank_deposit</td><td>存放同业款项</td></tr>
+                <tr><td>lending_funds</td><td>拆出资金</td></tr>
+                <tr><td>noble_metal</td><td>贵金属</td></tr>
+                <tr><td>tfa</td><td>交易性金融资产</td></tr>
+                <tr><td>dfia</td><td>衍生金融工具资产</td></tr>
+                <tr><td>brfa</td><td>买入返售金融资产</td></tr>
+                <tr><td>interest_receivable</td><td>应收利息</td></tr>
+                <tr><td>loans_and_advances</td><td>发放贷款及垫款</td></tr>
+                <tr><td>agency_business_assets</td><td>代理业务资产</td></tr>
+                <tr><td>sellable_financial_assets</td><td>可供出售金融资产</td></tr>
+                <tr><td>held-to-maturity_investment</td><td>持有至到期投资</td></tr>
+                <tr><td>long-term_equity_investment</td><td>长期股权投资</td></tr>
+                <tr><td>investment_receivables</td><td>应收投资款项</td></tr>
+                <tr><td>total_fixed_assets</td><td>固定资产合计</td></tr>
+                <tr><td>intangible_assets</td><td>无形资产</td></tr>
+                <tr><td>goodwill</td><td>商誉</td></tr>
+                <tr><td>deferred_tax_assets</td><td>递延税款借项</td></tr>
+                <tr><td>investment_real_estate</td><td>投资性房地产</td></tr>
+                <tr><td>other_assets</td><td>其他资产</td></tr>
+                <tr><td>total_assets</td><td>资产总计</td></tr>
+                <tr style="font-weight: bold;"><td>debts</td><td>负债</td></tr>
+                <tr><td>loan_from_central_bank</td><td>向中央银行借款</td></tr>
+                <tr><td>interbank_deposit_withdrawal</td><td>同业存入及拆入</td></tr>
+                <tr><td>interbank_deposits</td><td>其中:同业存放款项</td></tr>
+                <tr><td>fund_withdrawal</td><td>拆入资金</td></tr>
+                <tr><td>derivative_liabilities</td><td>衍生金融工具负债</td></tr>
+                <tr><td>trading_financial_liabilities</td><td>交易性金融负债</td></tr>
+                <tr><td>sell_buy_financial_assets</td><td>卖出回购金融资产款</td></tr>
+                <tr><td>customer_deposit</td><td>客户存款(吸收存款)</td></tr>
+                <tr><td>payable_remuneration</td><td>应付职工薪酬</td></tr>
+                <tr><td>taxes_payable</td><td>应交税费</td></tr>
+                <tr><td>interest_payable</td><td>应付利息</td></tr>
+                <tr><td>accounts_payable</td><td>应付账款</td></tr>
+                <tr><td>agency_liabilities</td><td>代理业务负债</td></tr>
+                <tr><td>bonds_payable</td><td>应付债券</td></tr>
+                <tr><td>deferred_tax_liability</td><td>递延所得税负债</td></tr>
+                <tr><td>projected_liabilities</td><td>预计负债</td></tr>
+                <tr><td>other_liabilities</td><td>其他负债</td></tr>
+                <tr><td>total_liabilities</td><td>负债合计</td></tr>
+                <tr style="font-weight: bold;"><td>equity</td><td>所有者权益</td></tr>
+                <tr><td>share_capital</td><td>股本</td></tr>
+                <tr><td>capital_accumulation_fund</td><td>资本公积金</td></tr>
+                <tr><td>other_comprehensive_income</td><td>其他综合收益</td></tr>
+                <tr><td>surplus_reserve_fund</td><td>盈余公积金金</td></tr>
+                <tr><td>undistributed_profit</td><td>未分配利润</td></tr>
+                <tr><td>general_risk_preparation</td><td>一般风险准备</td></tr>
+                <tr><td>translation_reserve</td><td>外币报表折算差额</td></tr>
+                <tr><td>total_sea_to_parent_company</td><td>归属于母公司的股东权益合计</td></tr>
+                <tr><td>minority_equity</td><td>少数股东权益</td></tr>
+                <tr><td>total_equity</td><td>所有者权益合计</td></tr>
+                <tr><td>total_liabilities_and_equity</td><td>负债及股东权益总计</td></tr>
+            </tbody>
+        </table>
+    - 保险
+        <table>
+            <thead><tr><th>参数</th><th>说明</th></tr></thead>
+            <tbody>
+                <tr style="font-weight: bold;"><td>asset</td><td>资产</td></tr>
+                <tr><td>money_funds</td><td>货币资金</td></tr>
+                <tr><td>withdrawal_of_funds</td><td>拆出资金</td></tr>
+                <tr><td>trading_financial_assets</td><td>交易性金融资产</td></tr>
+                <tr><td>derivative_financial_assets</td><td>衍生金融资产</td></tr>
+                <tr><td>buy_resale_financial_assets</td><td>买入返售金融资产</td></tr>
+                <tr><td>premium_receivable</td><td>应收保费</td></tr>
+                <tr><td>interest_receivable</td><td>应收利息</td></tr>
+                <tr><td>receivables</td><td>应收分保账款</td></tr>
+                <tr><td>responsible_undue_reserve</td><td>应收分保未到期责任准备金</td></tr>
+                <tr><td>receivables_unpaid_reserve</td><td>应收分保未决赔款准备金</td></tr>
+                <tr><td>responsible_life_reserve</td><td>应收分保寿险责任准备金</td></tr>
+                <tr><td>responsible_long-term_reserve</td><td>应收分保长期健康险责任准备金</td></tr>
+                <tr><td>policyholder_pledge_loan</td><td>保户质押贷款</td></tr>
+                <tr><td>for_sale_financial_assets</td><td>可供出售金融资产</td></tr>
+                <tr><td>held_to_maturity_investments</td><td>持有至到期投资</td></tr>
+                <tr><td>long-term_equity_investment</td><td>长期股权投资</td></tr>
+                <tr><td>deposit_capital_guarantee</td><td>存出资本保证金</td></tr>
+                <tr><td>receivables_investment</td><td>应收款项类投资</td></tr>
+                <tr><td>fixed_assets</td><td>固定资产</td></tr>
+                <tr><td>intangible_assets</td><td>无形资产</td></tr>
+                <tr><td>goodwill</td><td>商誉</td></tr>
+                <tr><td>separate_account_assets</td><td>独立账户资产</td></tr>
+                <tr><td>deferred_tax_assets</td><td>递延所得税资产</td></tr>
+                <tr><td>investment_real_estate</td><td>投资性房地产</td></tr>
+                <tr><td>time_deposit</td><td>定期存款</td></tr>
+                <tr><td>other_assets</td><td>其他资产</td></tr>
+                <tr><td>total_assets</td><td>资产总计</td></tr>
+                <tr style="font-weight: bold;"><td>debts</td><td>负债</td></tr>
+                <tr><td>short-term_loan</td><td>短期借款</td></tr>
+                <tr><td>unpacking_funds</td><td>拆入资金</td></tr>
+                <tr><td>trading_fin_liabilities</td><td>交易性金融负债</td></tr>
+                <tr><td>derivative_fin_liabilities</td><td>衍生金融负债</td></tr>
+                <tr><td>sell_buy_fin_assets</td><td>卖出回购金融资产款	</td></tr>
+                <tr><td>advance_receipt</td><td>预收账款</td></tr>
+                <tr><td>advance_payment</td><td>预收保费</td></tr>
+                <tr><td>fees_and_commissions</td><td>应付手续费及佣金</td></tr>
+                <tr><td>coping_with_reinsurance</td><td>应付分保账款</td></tr>
+                <tr><td>payroll_payable</td><td>应付职工薪酬</td></tr>
+                <tr><td>taxes_payable</td><td>应交税费</td></tr>
+                <tr><td>interest_payable</td><td>应付利息</td></tr>
+                <tr><td>payables</td><td>应付赔付款</td></tr>
+                <tr><td>payable_policy_dividend</td><td>应付保单红利</td></tr>
+                <tr><td>deposits_and_investment_funds</td><td>保户储金及投资款</td></tr>
+                <tr><td>unexpired_liability_reserve</td><td>未到期责任准备金</td></tr>
+                <tr><td>pending_claims_reserve</td><td>未决赔款准备金</td></tr>
+                <tr><td>life_insurance_reserve</td><td>寿险责任准备金</td></tr>
+                <tr><td>long-term_health_reserve</td><td>长期健康险责任准备金</td></tr>
+                <tr><td>long_term_loan</td><td>长期借款</td></tr>
+                <tr><td>bonds_payable</td><td>应付债券</td></tr>
+                <tr><td>separate_account_liability</td><td>独立账户负债</td></tr>
+                <tr><td>deferred_tax_liabilities</td><td>递延所得税负债</td></tr>
+                <tr><td>estimated_liabilities</td><td>预计负债</td></tr>
+                <tr><td>other_liabilities</td><td>其他负债</td></tr>
+                <tr><td>total_liabilities</td><td>负债合计</td></tr>
+                <tr style="font-weight: bold;"><td>equity</td><td>所有者权益</td></tr>
+                <tr><td>share_capital</td><td>股本</td></tr>
+                <tr><td>capital_accumulation_fund</td><td>资本公积金</td></tr>
+                <tr><td>other_comprehensive_income</td><td>其他综合收益</td></tr>
+                <tr><td>surplus_reserve_fund</td><td>盈余公积金金</td></tr>
+                <tr><td>undistributed_profit</td><td>未分配利润</td></tr>
+                <tr><td>general_risk_preparation</td><td>一般风险准备</td></tr>
+                <tr><td>foreign_currency_trading_diff</td><td>外币报表折算差额</td></tr>
+                <tr><td>total_sea_to_parent_company</td><td>归属于母公司的股东权益合计</td></tr>
+                <tr><td>minority_shareholders_equity</td><td>少数股东权益</td></tr>
+                <tr><td>total_equity</td><td>所有者权益合计</td></tr>
+                <tr><td>total_liabilities_and_equity</td><td>负债及股东权益总计</td></tr>
+            </tbody>
+        </table>
+    - 证券
+        <table>
+            <thead><tr><th>参数</th><th>说明</th></tr></thead>
+            <tbody>
+                <tr style="font-weight: bold;"><td>asset</td><td>资产</td></tr>
+                <tr><td>money_funds</td><td>货币资金</td></tr>
+                <tr><td>customer_deposit</td><td>客户资金存款</td></tr>
+                <tr><td>settlement_provisions</td><td>结算备付金</td></tr>
+                <tr><td>customer_reserve_funds</td><td>客户备付金</td></tr>
+                <tr><td>financing_funds</td><td>融出资金</td></tr>
+                <tr><td>transactional_financial_assets</td><td>交易性金融资产</td></tr>
+                <tr><td>derivative_financial_assets</td><td>衍生金融资产</td></tr>
+                <tr><td>buy_resale_fin_assets</td><td>买入返售金融资产</td></tr>
+                <tr><td>accounts_receivable</td><td>应收账款</td></tr>
+                <tr><td>interest_receivable</td><td>应收利息</td></tr>
+                <tr><td>refundable_deposits</td><td>存出保证金</td></tr>
+                <tr><td>available_for_sale_fin_assets</td><td>可供出售金融资产</td></tr>
+                <tr><td>held_to_maturity_investments</td><td>持有至到期投资</td></tr>
+                <tr><td>long-term_equity_investment</td><td>长期股权投资</td></tr>
+                <tr><td>fixed_assets</td><td>固定资产</td></tr>
+                <tr><td>intangible_assets</td><td>无形资产</td></tr>
+                <tr><td>trading_seat_fee</td><td>交易席位费</td></tr>
+                <tr><td>goodwill</td><td>商誉</td></tr>
+                <tr><td>deferred_tax_assets</td><td>递延所得税资产</td></tr>
+                <tr><td>investment_real_estate</td><td>投资性房地产</td></tr>
+                <tr><td>other_assets</td><td>投资性房地产</td></tr>
+                <tr><td>total_assets</td><td>资产总计</td></tr>
+                <tr style="font-weight: bold;"><td>debts</td><td>负债</td></tr>
+                <tr><td>short-term_loan</td><td>短期借款</td></tr>
+                <tr><td>pledge_loan</td><td>质押借款</td></tr>
+                <tr><td>coping_with_short-term_financing</td><td>应付短期融资款</td></tr>
+                <tr><td>unpacking_funds</td><td>拆入资金</td></tr>
+                <tr><td>trading_fin_liabilities</td><td>交易性金融负债</td></tr>
+                <tr><td>derivative_fin_liabilities</td><td>衍生金融负债</td></tr>
+                <tr><td>sell_repo_fin_assets</td><td>卖出回购金融资产款</td></tr>
+                <tr><td>agent_trading_securities</td><td>代理买卖证券款</td></tr>
+                <tr><td>agent_underwriting_securities</td><td>代理承销证券款</td></tr>
+                <tr><td>payroll_payable</td><td>应付职工薪酬</td></tr>
+                <tr><td>taxes_payable</td><td>应交税费</td></tr>
+                <tr><td>accounts_payable</td><td>应付账款</td></tr>
+                <tr><td>interest_payable</td><td>应付利息</td></tr>
+                <tr><td>long_term_loan</td><td>长期借款</td></tr>
+                <tr><td>bond_payable</td><td>应付债券款</td></tr>
+                <tr><td>deferred_tax_liabilities</td><td>递延所得税负债</td></tr>
+                <tr><td>estimated_liabilities</td><td>预计负债</td></tr>
+                <tr><td>other_liabilities</td><td>其他负债</td></tr>
+                <tr><td>total_liabilities</td><td>负债合计</td></tr>
+                <tr style="font-weight: bold;"><td>equity</td><td>所有者权益</td></tr>
+                <tr><td>share_capital</td><td>股本</td></tr>
+                <tr><td>other_equity_instruments</td><td>其他权益工具</td></tr>
+                <tr><td>capital_accumulation_fund</td><td>资本公积金</td></tr>
+                <tr><td>treasury_shares</td><td>库存股</td></tr>
+                <tr><td>other_comprehensive_income</td><td>其他综合收益</td></tr>
+                <tr><td>surplus_reserve_fund</td><td>盈余公积金金</td></tr>
+                <tr><td>undistributed_profit</td><td>未分配利润</td></tr>
+                <tr><td>general_risk_preparation</td><td>一般风险准备</td></tr>
+                <tr><td>trading_risk_preparation</td><td>交易风险准备</td></tr>
+                <tr><td>translation_reserve</td><td>外币报表折算差额</td></tr>
+                <tr><td>total_sea_to_parent_company</td><td>归属于母公司所有者权益合计</td></tr>
+                <tr><td>minority_shareholders'_equity</td><td>少数股东权益</td></tr>
+                <tr><td>total_equity</td><td>所有者权益合计</td></tr>
+                <tr><td>total_liabilities_and_equity</td><td>负债及股东权益总计</td></tr>
+            </tbody>
+        </table>
+    - 普通工商业
+    
+
+
