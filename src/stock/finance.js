@@ -16,7 +16,7 @@ let balanceSheetOptions={
             {
                 name:"asset",   //资产
                 values:[
-                    "cash&in_bank", //现金及存放中央银行款项
+                    "cash_deposit", //现金及存放中央银行款项
                     "bank_deposit", //存放同业款项
                     "lending_funds", //拆出资金
                     "noble_metal",     //贵金属
