@@ -7,7 +7,7 @@
  *--------------------------------------------------------------------------------------------*/
 const puppeteer = require('puppeteer');
 const format = require('string-format');
-async function diger(url, options) {
+async function digger(url, options) {
     return await puppeteer
         .launch()
         .then(async browser => {

@@ -7,7 +7,7 @@
  *  行业、概念、地域指数及成分
  *--------------------------------------------------------------------------------------------*/
 const public = require("./public");
-const diger = require("../utils/diger");
+const digger = require("../utils/digger");
 const format = require('string-format');
 const moment = require("moment");
 
@@ -47,7 +47,7 @@ let index = {
      */
     getMonthHis: async (code)=>{
         let endDate = moment().format("YYYYMMDD");
-        let his_str = await diger(format(public.stock_boardk.url,code,public.stock_boardk.lt.month,endDate));
+        let his_str = await digger(format(public.stock_boardk.url,code,public.stock_boardk.lt.month,endDate));
         return scrubber.formatHis(his_str);
     },
     /**
@@ -55,7 +55,7 @@ let index = {
      */
     getWeekHis: async (code)=>{
         let endDate = moment().format("YYYYMMDD");
-        let his_str = await diger(format(public.stock_boardk.url,code,public.stock_boardk.lt.week,endDate));
+        let his_str = await digger(format(public.stock_boardk.url,code,public.stock_boardk.lt.week,endDate));
         return scrubber.formatHis(his_str);
     },
     /**
@@ -63,14 +63,14 @@ let index = {
      */
     getDailyHis: async (code)=>{
         let endDate = moment().format("YYYYMMDD");
-        let his_str = await diger(format(public.stock_boardk.url,code,public.stock_boardk.lt.day,endDate));
+        let his_str = await digger(format(public.stock_boardk.url,code,public.stock_boardk.lt.day,endDate));
         return scrubber.formatHis(his_str);
     },
     /**
      * @param {code} 行业、概念、地域板块代码
      */
     getComponents: async (code)=>{
-        let his_str = await diger(format(public.stock_boardele.url,code));
+        let his_str = await digger(format(public.stock_boardele.url,code));
         return scrubber.formatEle(his_str);
     }
 }

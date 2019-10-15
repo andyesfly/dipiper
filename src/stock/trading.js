@@ -6,7 +6,7 @@
  *  Licensed under the GPL-3.0 License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 const public = require("./public");
-const diger = require("../utils/diger");
+const digger = require("../utils/digger");
 const format = require('string-format');
 const moment = require("moment");
 
@@ -59,19 +59,19 @@ let scrubber={
 
 let trading={
     getMonthHis:async(code)=>{
-        let his_str = await diger(format(public.stock_month_his.url,code));
+        let his_str = await digger(format(public.stock_month_his.url,code));
         return scrubber.hisFormat(his_str);
     },
     getWeekHis:async(code)=>{
-        let his_str=await diger(format(public.stock_week_his.url,code));
+        let his_str=await digger(format(public.stock_week_his.url,code));
         return scrubber.hisFormat(his_str);
     },
     getDailyHis:async(year,code)=>{
-        let his_str=await diger(format(public.stock_daily_his.url,year,code));
+        let his_str=await digger(format(public.stock_daily_his.url,year,code));
         return scrubber.hisFormat(his_str);
     },
     getMin:async(code)=>{
-        let min_str = await diger(format(public.stock_min.url,code));
+        let min_str = await digger(format(public.stock_min.url,code));
         return scrubber.minFormat(min_str);
     }
 }

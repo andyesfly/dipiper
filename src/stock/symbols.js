@@ -7,7 +7,7 @@
  *  股票列表、分类、发行等基础信息
  *--------------------------------------------------------------------------------------------*/
 const public = require("./public");
-const diger = require("../utils/diger");
+const digger = require("../utils/digger");
 const format = require('string-format');
 
 let addPrefix = (code) => {
@@ -21,7 +21,7 @@ let symbols = {
     getStockList: async() => {
         let result = [];
         for (let i = 1; i < 40; i++) {
-            let list_str = await diger(format(public.stock_list.url, i));
+            let list_str = await digger(format(public.stock_list.url, i));
             let lo = eval(list_str);
             if (!lo) 
                 break;
@@ -78,13 +78,13 @@ let symbols = {
                 }
             ]
         }
-        return await diger(format(public.stock_issue.url, code), options);
+        return await digger(format(public.stock_issue.url, code), options);
     },
     /**
      * @returns {json} 行业板块列表
      */
     getIndustryList:async ()=>{
-        let list_str = await diger(public.stock_board.url);
+        let list_str = await digger(public.stock_board.url);
         let list_obj = eval(list_str);
         let industries = list_obj.filter(e=>e.key==="hsbroad")[0].next.filter(e=>e.key==="industry_board")[0].next;
         let result = industries.map(ele=>{
@@ -100,7 +100,7 @@ let symbols = {
      * @returns {json} 概念板块列表
      */
     getConceptList: async ()=>{
-        let list_str = await diger(public.stock_board.url);
+        let list_str = await digger(public.stock_board.url);
         let list_obj = eval(list_str);
         let concepts = list_obj.filter(e=>e.key==="hsbroad")[0].next.filter(e=>e.key==="concept_board")[0].next;
         let result = concepts.map(ele=>{
@@ -116,7 +116,7 @@ let symbols = {
      * @returns {json} 地域板块列表
      */
     getAreaList: async ()=>{
-        let list_str = await diger(public.stock_board.url);
+        let list_str = await digger(public.stock_board.url);
         let list_obj = eval(list_str);
         let concepts = list_obj.filter(e=>e.key==="hsbroad")[0].next.filter(e=>e.key==="region_board")[0].next;
         let result = concepts.map(ele=>{
@@ -134,7 +134,7 @@ let symbols = {
      */
     getBoards: async (code)=>{
         let market = code.substring(0,1)==="6"?1:0;
-        let list_str = await diger(format(public.stock_sboard.url,market,code));
+        let list_str = await digger(format(public.stock_sboard.url,market,code));
         let his_obj = JSON.parse(list_str.substring(list_str.indexOf("(")+1,list_str.length-2));
         let result = [];
         for(var b in his_obj.data.diff){

@@ -43,6 +43,9 @@ const data_source={
     },
     stock_balancesheet:{
         url:"http://money.finance.sina.com.cn/corp/go.php/vFD_BalanceSheet/stockid/{0}/ctrl/{1}/displaytype/4.phtml"
+    },
+    stock_profitstatement:{
+        url:"http://money.finance.sina.com.cn/corp/go.php/vFD_ProfitStatement/stockid/{0}/ctrl/{1}/displaytype/4.phtml"
     }
 }
 
