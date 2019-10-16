@@ -4,9 +4,10 @@
  *  Contact: 35127884@qq.com
  *  Copyright (c) Hans Liu. All rights reserved.
  *  Licensed under the GPL-3.0 License. See License.txt in the project root for license information.
+ * 个股财务信息（财务指标、三大报表）
  *--------------------------------------------------------------------------------------------*/
 const public = require("./public");
-const diger = require("../utils/diger");
+const digger = require("../utils/digger");
 const format = require('string-format');
 const moment = require("moment");
 
@@ -455,6 +456,7 @@ let balanceSheetOptions={
                 xpath:{
                     path:"//table[@id='BalanceSheetNewTable0']//tr[{0}]//td[{1}]",
                     param:{
+                        type:"value",
                         start:23,
                         end:44,
                         append:[{
@@ -575,6 +577,243 @@ let balanceSheetOptions={
             }
         ]
     }
+}
+
+let profitStatementOptions={
+    bank:{
+        tags:[
+            {
+                name:"profit_statemet",
+                values:[
+                    "date",
+                    "operating_income",     //营业收入
+                    "net_interest_income",     //利息净收入
+                    "interest_income",     //其中：利息收入
+                    "interest_expense",     //减：利息支出
+                    "n_fee_comm_income",     //手续费及佣金净收入
+                    "comm_income",     //其中:手续费及佣金收入
+                    "comm_expenses",     //减：手续费及佣金支出
+                    "exchange_gains",     //汇兑收益
+                    "investment_income",     //投资净收益
+                    "jv_invest_income",     //其中:对联营公司的投资收益
+                    "fair_value_change_income",     //公允价值变动净收益
+                    "other_income",     //其他业务收入
+                    "operating_expenses",     //营业支出
+                    "tax_surcharges",     //营业税金及附加
+                    "management_expenses",     //业务及管理费用
+                    "asset_loss",     //资产减值损失
+                    "other_expenses",     //其他业务支出
+                    "operating_profit",     //营业利润
+                    "plus_nop_income",     //加:营业外收入
+                    "less_nop_expenses",     //减:营业外支出
+                    "total_profit",     //利润总额
+                    "less_income_tax",     //减:所得税
+                    "net_profit",     //净利润
+                    "profits_to_pcom",     //归属于母公司的净利润
+                    "minority_interest_income",     //少数股东权益
+                    "basic_earnings_per_share",     //基本每股收益(元/股)
+                    "diluted_earnings_per_share",     //稀释每股收益(元/股)
+                    "other_compr_income",     //其他综合收益
+                    "t_compr_income",     //综合收益总额
+                    "t_compr_income_attr_p",     //归属于母公司所有者的综合收益总额
+                    "t_compr_income_attr_ms",     //归属于少数股东的综合收益总额
+                ],
+                xpath:{
+                    path:"//table[@id='ProfitStatementNewTable0']//tr[{0}]//td[{1}]",
+                    param:{
+                        type:"value",
+                        start:1,
+                        end:35,
+                        exclude:[28],
+                        child:{
+                            type:"group",
+                            start:2,
+                            end:5
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    insurance:{
+        tags:[
+            {
+                name:"profit_statemet",
+                values:[
+                    "date",
+                    "operating_income",     //营业收入
+                    "earned_premium",     //已赚保费
+                    "prem_income",     //保费业务收入
+                    "reins_income",     //其中:分保费收入
+                    "out_prem",     //减:分出保费
+                    "une_prem_reser",     //提取未到期责任准备金
+                    "investment_income",     //投资净收益
+                    "jv_invest_loss",     //其中:对联营企业和合营企业的投资损失
+                    "fair_value_change_income",     //公允价值变动损益
+                    "exchange_gains",     //汇兑损益
+                    "other_income",     //其他业务收入
+                    "operating_expenses",     //营业支出
+                    "withdrawal",     //退保金
+                    "payout",     //赔付支出
+                    "compens_payout_refu",     //减:摊回赔付支出
+                    "reser_insur_liab",     //提取保险责任准备金
+                    "insur_reser_refu",     //减:摊回保险责任准备金
+                    "div_payt",     //保户红利支出
+                    "reinsurance_costs",     //分保费用
+                    "tax_surcharges",     //营业税金及附加
+                    "comm_expenses",     //手续费及佣金支出
+                    "management_costs",     //管理费用
+                    "reins_cost_refund",     //减:摊回分保费用
+                    "other_expenses",     //其他业务成本
+                    "asset_loss",     //资产减值损失
+                    "operating_profit",     //营业利润
+                    "plus_nop_income",     //加:营业外收入
+                    "less_nop_expenses",     //减:营业外支出
+                    "total_profit",     //利润总额
+                    "less_income_tax",     //减:所得税
+                    "net_profit",     //净利润
+                    "profits_to_pcom",     //归属于母公司的净利润
+                    "minority_interest_income",     //少数股东权益
+                    "basic_earnings_per_share",     //基本每股收益(元/股)
+                    "diluted_earnings_per_share",     //稀释每股收益(元/股)
+                    "other_compr_income",     //其他综合收益
+                    "t_compr_income",     //综合收益总额
+                    "t_compr_income_attr_p",     //归属于母公司所有者的综合收益总额
+                    "t_compr_income_attr_ms",     //归属于少数股东的综合收益总额
+                ],
+                xpath:{
+                    path:"//table[@id='ProfitStatementNewTable0']//tr[{0}]//td[{1}]",
+                    param:{
+                        type:"value",
+                        start:1,
+                        end:43,
+                        exclude:[36],
+                        child:{
+                            type:"group",
+                            start:2,
+                            end:5
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    security:{
+        tags:[
+            {
+                name:"profit_statemet",
+                values:[
+                    "date",
+                    "operating_income",     //营业收入
+                    "n_fee_comm_income",     //手续费及佣金净收入
+                    "n_sec_tb_income",     //代理买卖证券业务净收入
+                    "n_sec_uw_income",     //证券承销业务净收入
+                    "n_asset_mg_income",     //受托客户资产管理业务净收入
+                    "net_interest_income",     //利息净收入
+                    "interest_income",     //其中:利息收入
+                    "interest_expense",     //利息支出
+                    "investment_income",     //投资收益
+                    "jv_invest_income",     //其中:对联营企业和合营企业的投资收益
+                    "fair_value_change_income",     //公允价值变动损益
+                    "exchange_gains",     //汇兑损益
+                    "other_income",     //其他业务收入
+                    "operating_expenses",     //营业支出
+                    "tax_surcharges",     //营业税金及附加
+                    "management_costs",     //管理费用
+                    "asset_loss",     //资产减值损失
+                    "other_expenses",     //其他业务成本
+                    "operating_profit",     //营业利润
+                    "plus_nop_income",     //加:营业外收入
+                    "less_nop_expenses",     //减:营业外支出
+                    "total_profit",     //利润总额
+                    "less_income_tax",     //减:所得税
+                    "net_profit",     //净利润
+                    "profits_to_pcom",     //归属于母公司的净利润
+                    "minority_interest_income",     //少数股东权益
+                    "earnings_per_share",     //每股收益
+                    "basic_earnings_per_share",     //基本每股收益(元/股)
+                    "diluted_earnings_per_share",     //稀释每股收益(元/股)
+                    "other_compr_income",     //其他综合收益
+                    "t_compr_income",     //综合收益总额
+                    "t_compr_income_attr_p",     //归属于母公司所有者的综合收益总额
+                    "t_compr_income_attr_ms",     //归属于少数股东的综合收益总额
+                ],
+                xpath:{
+                    path:"//table[@id='ProfitStatementNewTable0']//tr[{0}]//td[{1}]",
+                    param:{
+                        type:"value",
+                        start:1,
+                        end:36,
+                        exclude:[29],
+                        child:{
+                            type:"group",
+                            start:2,
+                            end:5
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    general:{
+        tags:[
+            {
+                name:"profit_statemet",
+                values:[
+                    "date",
+                    "total_income",     //营业总收入
+                    "income",     //营业收入
+                    "total_costs	",     //营业总成本
+                    "costs",     //营业成本
+                    "tax_surcharges",     //营业税金及附加
+                    "sales_expense",     //销售费用
+                    "management_costs",     //管理费用
+                    "financial_expenses",     //财务费用
+                    "asset_loss",     //资产减值损失
+                    "fair_value_change_income",     //公允价值变动收益
+                    "investment_income",     //投资净收益
+                    "jv_invest_income",     //其中:对联营企业和合营企业的投资收益
+                    "exchange_gains",     //汇兑收益
+                    "operating_profit",     //营业利润
+                    "plus_nop_income",     //加:营业外收入
+                    "less_nop_expenses",     //减：营业外支出
+                    "nca_disploss",     //其中：非流动资产处置损失
+                    "total_profit",     //利润总额
+                    "deduct_income_tax",     //减：所得税费用
+                    "net_profit",     //净利润
+                    "profits_to_pcom",     //归属于母公司所有者的净利润
+                    "minority_interest_income",     //少数股东损益
+                    "basic_earnings_per_share",     //基本每股收益(元/股)
+                    "diluted_earnings_per_share",     //稀释每股收益(元/股)
+                    "other_compr_income",     //其他综合收益
+                    "t_compr_income",     //综合收益总额
+                    "t_compr_income_attr_p",     //归属于母公司所有者的综合收益总额
+                    "t_compr_income_attr_ms",     //归属于少数股东的综合收益总额
+                ],
+                xpath:{
+                    path:"//table[@id='ProfitStatementNewTable0']//tr[{0}]//td[{1}]",
+                    param:{
+                        type:"value",
+                        start:1,
+                        end:32,
+                        exclude:[25],
+                        child:{
+                            type:"group",
+                            start:2,
+                            end:5
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
+
+let cashFlowOptions={
+    bank:{},
+    insurance:{},
+    security:{},
+    general:{}
 }
 
 let finance ={
@@ -774,16 +1013,37 @@ let finance ={
                 }
             ]
         }
-        return await diger(format(public.stock_guidline.url,code,year),options);
+        return await digger(format(public.stock_guidline.url,code,year),options);
     },
     /**
      * @param {string} code 股票代码
      * @param {string} year 年份
+     * @param {string} company_type 公司类型
      * @returns {json} 资产负债表
      */
     getBalanceSheet: async(code,year,company_type)=>{
-        let options = balanceSheetOptions[company_type]
-        return await diger(format(public.stock_balancesheet.url,code,year),options);
+        let options = balanceSheetOptions[company_type];
+        return await digger(format(public.stock_balancesheet.url,code,year),options);
+    },
+    /**
+     * @param {string} code 股票代码
+     * @param {string} year 年份
+     * @param {string} company_type 公司类型
+     * @returns {json} 利润表
+     */
+    getProfitStatment: async(code,year,company_type)=>{
+        let options=profitStatementOptions[company_type];
+        return await digger(format(public.stock_profitstatement.url,code,year),options);
+    },
+    /**
+     * @param {string} code 股票代码
+     * @param {string} year 年份
+     * @param {string} company_type 公司类型
+     * @returns {json} 现金流量表
+     */
+    getCashFlowStatment: async(code,year,company_type)=>{
+        let options=cashFlowOptions[company_type];
+        return await digger(format(public.stock_profitstatement.url,code,year),options);
     }
 }
 
