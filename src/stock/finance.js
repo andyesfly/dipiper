@@ -810,10 +810,411 @@ let profitStatementOptions={
 }
 
 let cashFlowOptions={
-    bank:{},
-    insurance:{},
-    security:{},
-    general:{}
+    bank:{
+        tags:[
+            {
+                name:"cash_flow",
+                values:[
+                    "date",
+                    "net_incr_deposits",     //客户存款和同业存放款项净增加额
+                    "net_incr_borrowing_ctbank",     //向央行借款净增加额
+                    "net_incr_borr_oth_fi",     //向其他金融机构拆入资金净增加额
+                    "cash_interest_commission",     //收取利息、手续费及佣金的现金
+                    "received_other_cash",     //收到其他与经营活动有关的现金
+                    "subtotal_cash_in_op",     //经营活动现金流入小计
+                    "net_incr_cust_loans",     //客户贷款及垫款净增加额
+                    "deposit_net_incr",     //存放中央银行和同业款项净增加额
+                    "cash_for_employees",     //支付给职工以及为职工支付的现金
+                    "various_taxes_paid",     //支付的各项税费
+                    "other_pay",     //支付其他与经营活动有关的现金
+                    "pay_interest_commission",     //支付利息、手续费及佣金的现金
+                    "subtotal_cash_out",     //经营活动现金流出小计
+                    "net_cash_flow",     //经营活动产生的现金流量净额
+                    "cash_from_investment",     //收回投资收到的现金
+                    "cash_investment_income",     //取得投资收益收到的现金
+                    "net_cash_assets",     //处置固定资产、无形资产及其他资产而收到的现金
+                    "net_cash_subsidiaries",     //取得子公司及其他营业单位所收到的现金净额
+                    "other_cash_investment",     //收到其他与投资活动有关的现金
+                    "subtotal_cash_investment",     //投资活动现金流入小计
+                    "cash_paid_investment",     //投资所支付的现金
+                    "cash_paid_assets",     //购建固定资产、无形资产和其他长期资产支付的现金
+                    "other_cash_paid_investment",     //支付的其他与投资活动有关的现金
+                    "subtotal_cash_out_investment",     //投资活动现金流出小计
+                    "net_cash_flows_investing",     //投资活动产生的现金流量净额
+                    "cash_received_investment",     //吸收投资所收到的现金
+                    "cash_received_securitized",     //发行证券化资产所吸收的现金
+                    "cash_received_bonds",     //发行债券收到的现金
+                    "cash_received_capital",     //增加股本所收到的现金
+                    "cash_received_financing",     //收到其他与筹资活动有关的现金
+                    "subtotal_cash_financing",     //筹资活动现金流入小计
+                    "cash_paid_debt",     //偿还债务所支付的现金
+                    "cash_paid_dpp",     //分配股利、利润或偿付利息支付的现金
+                    "cash_paid_interest",     //其中:偿付利息所支付的现金
+                    "pay_ns_issuance",     //支付新股发行费用
+                    "other_cash_out_financing",     //支付其他与筹资活动有关的现金
+                    "subtotal_cash_out_financing",     //筹资活动现金流出小计
+                    "net_cash_flow_financing",     //筹资活动产生的现金流量净额
+                    "exchange_rate_cash",     //四、汇率变动对现金及现金等价物的影响
+                    "net_increase_cash",     //五、现金及现金等价物净增加额
+                    "cash_beginning",     //加:期初现金及现金等价物余额
+                    "cash_end",     //六、期末现金及现金等价物余额
+                    "net_profit",     //净利润
+                    "ms_equity",     //加:少数股东收益
+                    "impairment_of_assets",     //计提的资产减值准备
+                    "provision_bad_debts",     //其中：计提的坏账准备
+                    "provision_for_loan_loss",     //计提的贷款损失准备
+                    "rb_impairment_provision",     //冲回存放同业减值准备
+                    "depreciation_of_assets",     //固定资产折旧、油气资产折耗、生产性生物资产折旧
+                    "inv_prop_depreciation",     //投资性房地产折旧
+                    "amort_intangible_ado",     //无形资产、递延资产及其他资产的摊销
+                    "amort_intangible_assets",     //其中:无形资产摊销
+                    "lt_deferred_exp_amort",     //长期待摊费用摊销
+                    "lt_asset_amortization",     //长期资产摊销
+                    "disposal_of_assets",     //处置固定资产、无形资产和其他长期产的损失/(收益)
+                    "disposal_of_inv_prop",     //处置投资性房地产的损失/(收益)
+                    "fx_asset_loss",     //固定资产报废损失
+                    "financial_expenses",     //财务费用
+                    "investment_loss",     //投资损失(减:收益)
+                    "loss_fair_value",     //公允价值变动(收益)/损失
+                    "exchange_gains_losses",     //汇兑损益
+                    "net_gains_loss_derivative",     //衍生金融工具交易净损益
+                    "discounted_withdrawal",     //折现回拔(减值资产利息冲转)
+                    "reduction_in_inventory",     //存货的减少
+                    "reduction_in_loans",     //贷款的减少
+                    "increase_in_deposits",     //存款的增加
+                    "net_increase_in_borrowings",     //拆借款项的净增
+                    "reduction_financial_assets",     //金融性资产的减少
+                    "estimated_incr_liabilities",     //预计负债的增加
+                    "received_writeoffs",     //收到已核销款项
+                    "decr_def_inc_tax_assets",     //递延所得税资产的减少
+                    "incr_def_inc_tax_liab",     //递延所得税负债的增加
+                    "incr_oper_receivables",     //经营性应收项目的增加
+                    "incr_oper_payables",     //经营性应付项目的增加
+                    "decr_other_assets",     //经营性其他资产的减少
+                    "incr_other_liabilities",     //经营性其他负债的增加
+                    "other",     //其他
+                    "net_cash_flow_op",     //经营活动现金流量净额
+                    "repay_debts_with_fa",     //以固定资产偿还债务
+                    "repay_debts_with_inv",     //以投资偿还债务
+                    "invest_in_fa",     //以固定资产进行投资
+                    "conv_debt_into_cap",     //债务转为资本
+                    "convertible_bonds_in_1year",     //一年内到期的可转换公司债券
+                    "financing_leased_fa",     //融资租入固定资产
+                    "other_inv_fr_cash",     //其他不涉及现金收支的投资和筹资活动金额
+                    "ending_balance_of_cash",     //现金的期末余额
+                    "cash_beginning_balance",     //减:现金的期初余额
+                    "ending_cash_eq",     //现金等价物的期末余额
+                    "opening_cash_eq",     //减：现金等价物的期初余额
+                    "incr_net_cash_eq",     //现金及现金等价物净增加额
+                ],
+                xpath:{
+                    path:"//table[@class='table']//tr[{0}]//td[{1}]",
+                    param:{
+                        type:"value",
+                        start:1,
+                        end:97,
+                        exclude:[2,3,18,30,48],
+                        child:{
+                            type:"group",
+                            start:2,
+                            end:5
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    insurance:{
+        tags:[
+            {
+                name:"cash_flow",
+                values:[
+                    "date",
+                    "prem_fr_orig_contr",     //收到原保险合同保费取得的现金 
+                    "n_reinsur_prem",     //收到再保业务现金净额 
+                    "other_cash_operating",     //收到其他与经营活动有关的现金 
+                    "n_incr_insured_dep",     //保户储金净增加额 
+                    "subtotal_cash_in_operating",     //经营活动现金流入小计 
+                    "c_pay_claims_orig_inco",     //支付原保险合同赔付款项的现金 
+                    "cash_for_employees",     //支付给职工以及为职工支付的现金 
+                    "pay_handling_chrg",     //支付手续费的现金 
+                    "various_taxes_paid",     //支付的各项税费 
+                    "other_pay",     //支付其他与经营活动有关的现金 
+                    "pay_policy_bonus",     //支付保单红利的现金 
+                    "subtotal_cash_out",     //经营活动现金流出小计 
+                    "net_cash_flow",     //经营活动产生的现金流量净额 
+                    "cash_from_investment",     //收回投资收到的现金 
+                    "cash_investment_income",     //取得投资收益收到的现金 
+                    "net_cash_assets",     //处置固定资产、无形资产和其他长期资产收回的现金净额 
+                    "net_cash_subsidiaries",     //处置子公司及其他营业单位收到的现金 
+                    "other_cash_investment",     //收到其他与投资活动有关的现金 
+                    "subtotal_cash_investment",     //投资活动现金流入小计 
+                    "cash_paid_investment",     //投资支付的现金 
+                    "net_incr_loans",     //质押贷款净增加额 
+                    "cash_paid_assets",     //购建固定资产、无形资产和其他长期资产支付的现金 
+                    "net_cash_paid_subsidiaries",     //购买子公司及其他营业单位支付的现金净额 
+                    "other_cash_paid_investment",     //支付其他与投资活动有关的现金 
+                    "subtotal_cash_out_investment",     //投资活动现金流出小计 
+                    "net_cash_flows_investing",     //投资活动产生的现金流量净额 
+                    "cash_received_investment",     //吸收投资收到的现金 
+                    "cash_received_loan",     //取得借款收到的现金 
+                    "cash_received_bonds",     //发行债券收到的现金 
+                    "cash_received_financing",     //收到其他与筹资活动有关的现金 
+                    "subtotal_cash_financing",     //筹资活动现金流入小计 
+                    "cash_paid_debt",     //偿还债务支付的现金 
+                    "cash_paid_dpp",     //分配股利、利润或偿付利息所支付的现金 
+                    "other_cash_out_financing",     //支付的其他与筹资活动有关的现金 
+                    "subtotal_cash_out_financing",     //筹资活动现金流出小计 
+                    "net_cash_flow_financing",     //筹资活动产生的现金流量净额 
+                    "exchange_rate_cash",     //四、汇率变动对现金及现金等价物的影响 
+                    "net_increase_cash",     //五、现金及现金等价物净增加额 
+                    "cash_beginning",     //加:期初现金及现金等价物余额 
+                    "cash_end",     //六、期末现金及现金等价物余额 
+                    "note",     //附注 
+                    "net_profit",     //净利润 
+                    "impairment_of_assets",     //加:计提(转回)资产减值准备 
+                    "estimated_liabilities",     //计提的预计负债 
+                    "net_liability_reserves",     //提取的各项保险责任准备金净额 
+                    "unexpired_liability_reserve",     //提取的未到期的责任准备金 
+                    "inv_prop_depreciation",     //投资性房地产折旧 
+                    "depreciation_of_assets",     //固定资产折旧、油气资产折耗、生产性生物资产折旧 
+                    "amort_ido_assets",     //无形资产、递延资产及其他资产摊销 
+                    "amort_intangible_assets",     //其中:无形资产摊销 
+                    "lt_deferred_exp_amort",     //长期待摊费用摊销 
+                    "lt_assets_exp_amort",     //长期资产摊销 
+                    "incr_accrued_exp",     //预提费用的增加 
+                    "disposal_of_assets",     //处置固定资产、无形资产和其他长期资产的损失(收益) 
+                    "disposal_invest_prop",     //处置投资性房地产的收益 
+                    "investment_income",     //投资收益 
+                    "loss_fair_value",     //公允价值变动损失(收益) 
+                    "automatic_premium_payment",     //自动垫缴保费收入 
+                    "interest_income",     //利息收入 
+                    "interest_expense",     //利息支出 
+                    "exchange_gains_losses",     //汇兑损失(收益) 
+                    "incr_deposits_invest",     //保户储金及投资款的增加 
+                    "deferred_income_tax",     //递延所得税费用 
+                    "decr_def_inc_tax_assets",     //其中:递延所得税资产的减少(增加) 
+                    "incr_def_inc_tax_liab",     //递延所得税负债的减少(增加) 
+                    "decr_financial_assets",     //金融资产的减少 
+                    "incr_financial_liabilities",     //金融负债的增加 
+                    "decr_oper_receivables",     //经营性应收项目的减少(增加) 
+                    "incr_oper_payable",     //经营性应付项目的增加(减少) 
+                    "net_cash_flow_n",     //经营活动产生的现金流量净额<附表> 
+                    "debt_with_assets",     //联营企业以资产抵偿其对本公司的债务 
+                    "replaced_shareholdings",     //少数股东以所持子公司股权置换为其对本公司的股权 
+                    "ending_balance_of_cash",     //现金的期末余额 
+                    "cash_beginning_balance",     //减:现金的期初余额 
+                    "ending_cash_eq",     //加:现金等价物的期末余额 
+                    "opening_cash_eq",     //减:现金等价物的期初余额 
+                    "incr_net_cash_eq",     //现金及现金等价物净增加/(减少)额 
+                ],
+                xpath:{
+                    path:"//table[@class='table']//tr[{0}]//td[{1}]",
+                    param:{
+                        type:"value",
+                        start:1,
+                        end:83,
+                        exclude:[2,3,17,31,46],
+                        child:{
+                            type:"group",
+                            start:2,
+                            end:5
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    security:{
+        tags:[
+            {
+                name:"cash_flow",
+                values:[
+                    "date",
+                    "n_incr_disp_tfa",     //处置交易性金融资产净增加额
+                    "n_incr_disp_afa",     //处置可供出售金融资产净增加额
+                    "cash_interest_commission",     //收取利息、手续费及佣金的现金
+                    "n_incr_loans_oth_bank",     //拆入资金净增加额
+                    "n_incr_repurchase",     //回购业务资金净增加额
+                    "received_other_cash",     //收到的其他与经营活动有关的现金
+                    "subtotal_cash_in_op",     //经营活动现金流入小计
+                    "cash_for_employees",     //支付给职工以及为职工支付的现金
+                    "various_taxes_paid",     //支付的各项税费
+                    "other_cash",     //支付其他与经营活动有关的现金
+                    "pay_interest_commission",     //支付利息、手续费及佣金的现金
+                    "subtotal_cash_out",     //经营活动现金流出小计
+                    "net_cash_flow",     //经营活动产生的现金流量净额
+                    "cash_from_investment",     //收回投资收到的现金
+                    "cash_investment_income",     //取得投资收益收到的现金
+                    "net_cash_assets",     //处置固定资产、无形资产及其他长期资产收回的现金净额
+                    "other_cash_investment",     //收到其他与投资活动有关的现金
+                    "subtotal_cash_investment",     //投资活动现金流入小计
+                    "cash_paid_investment",     //投资支付的现金
+                    "cash_paid_assets",     //购建固定资产、无形资产和其他长期资产支付的现金
+                    "other_cash_paid_investment",     //支付其他与投资活动有关的现金
+                    "subtotal_cash_out_investment",     //投资活动现金流出小计
+                    "net_cash_flows_investing",     //投资活动产生的现金流量净额
+                    "cash_received_investment",     //吸收投资收到的现金
+                    "cash_received_loan",     //取得借款收到的现金
+                    "cash_received_bonds",     //发行债券收到的现金
+                    "cash_received_financing",     //收到其他与筹资活动有关的现金
+                    "subtotal_cash_financing",     //筹资活动现金流入小计
+                    "cash_paid_debt",     //偿还债务支付的现金
+                    "cash_paid_dpp",     //分配股利、利润或偿付利息所支付的现金
+                    "other_cash_out_financing",     //支付其他与筹资活动有关的现金
+                    "subtotal_cash_out_financing",     //筹资活动现金流出小计
+                    "net_cash_flow_financing",     //筹资活动产生的现金流量净额
+                    "exchange_rate_cash",     //四、汇率变动对现金及现金等价物的影响
+                    "net_increase_cash",     //五、现金及现金等价物净增加额
+                    "cash_beginning",     //加:期初现金及现金等价物余额
+                    "cash_end",     //六、期末现金及现金等价物余额
+                    "note",     //附注
+                    "net_profit",     //净利润
+                    "minority_interest_income",     //加:少数股东损益
+                    "impairment_of_assets",     //资产减值准备
+                    "risk_reserve_expenditure",     //风险准备金支出
+                    "depreciation_of_assets",     //固定资产折旧、油气资产折耗、生产性生物资产折旧
+                    "amort_ido_assets",     //无形资产、递延资产及其他资产摊销
+                    "amort_intangible_assets",     //其中:无形资产摊销
+                    "lt_deferred_exp_amort",     //长期待摊费用摊销
+                    "lt_assets_exp_amort",     //长期资产摊销
+                    "decr_deferred_exp",     //待摊费用减少(减:增加)
+                    "incr_accrued_exp",     //预提费用增加
+                    "disposal_of_assets",     //处置固定资产、无形资产和其他长期资产的损失
+                    "fx_asset_loss",     //固定资产报废损失
+                    "decr_financial_assets",     //金融资产的减少
+                    "incrin_fin_liab",     //各种金融负债的增加
+                    "loss_fair_value",     //公允价值变动损失
+                    "financial_expenses",     //财务费用
+                    "investment_loss",     //投资损失
+                    "exchange_gains_losses",     //汇兑损益/(损失)
+                    "decr_def_inc_tax_assets",     //递延所得税资产减少
+                    "incr_def_inc_tax_liab",     //递延所得税负债增加
+                    "reduction_in_inventory",     //存货的减少
+                    "decr_oper_receivables",     //经营性应收项目的减少
+                    "incr_oper_payable",     //经营性应付项目的增加
+                    "other",     //其他
+                    "net_cash_flow_n",     //经营活动产生的现金流量净额<附表>
+                    "conv_debt_into_cap",     //债务转为资本
+                    "financing_leased_fa",     //融资租入固定资产
+                    "ending_balance_of_cash",     //现金的期末余额
+                    "cash_beginning_balance",     //减:现金的期初余额
+                    "ending_cash_eq",     //加:现金等价物的期末余额
+                    "opening_cash_eq",     //减:现金等价物的期初余额
+                    "incr_net_cash_eq",     //现金及现金等价物净增加额
+                ],
+                xpath:{
+                    path:"//table[@class='table']//tr[{0}]//td[{1}]",
+                    param:{
+                        type:"value",
+                        start:1,
+                        end:77,
+                        exclude:[2,3,16,27,42],
+                        child:{
+                            type:"group",
+                            start:2,
+                            end:5
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    general:{
+        tags:[
+            {
+                name:"cash_flow",
+                values:[
+                    "date",
+                    "cash_sale_services",     //销售商品、提供劳务收到的现金
+                    "tax_refund",     //收到的税费返还
+                    "other_cash_operating",     //收到的其他与经营活动有关的现金
+                    "subtotal_cash_in_operating",     //经营活动现金流入小计
+                    "cash_for_goods_services",     //购买商品、接受劳务支付的现金
+                    "cash_for_employees",     //支付给职工以及为职工支付的现金
+                    "various_taxes_paid",     //支付的各项税费
+                    "other_pay",     //支付的其他与经营活动有关的现金
+                    "subtotal_cash_out",     //经营活动现金流出小计
+                    "net_cash_flow",     //经营活动产生的现金流量净额
+                    "cash_from_investment",     //收回投资所收到的现金
+                    "cash_investment_income",     //取得投资收益所收到的现金
+                    "net_cash_assets",     //处置固定资产、无形资产和其他长期资产所收回的现金净额
+                    "net_cash_subsidiaries",     //处置子公司及其他营业单位收到的现金净额
+                    "other_cash_investment",     //收到的其他与投资活动有关的现金
+                    "subtotal_cash_investment",     //投资活动现金流入小计
+                    "cash_paid_assets",     //购建固定资产、无形资产和其他长期资产所支付的现金
+                    "cash_paid_investment",     //投资所支付的现金
+                    "net_cash_paid_subsidiaries",     //取得子公司及其他营业单位支付的现金净额
+                    "other_cash_paid_investment",     //支付的其他与投资活动有关的现金
+                    "subtotal_cash_out_investment",     //投资活动现金流出小计
+                    "net_cash_flows_investing",     //投资活动产生的现金流量净额
+                    "cash_received_investment",     //吸收投资收到的现金
+                    "cash_received_ms",     //其中：子公司吸收少数股东投资收到的现金
+                    "cash_received_loan",     //取得借款收到的现金
+                    "cash_received_bonds",     //发行债券收到的现金
+                    "cash_received_financing",     //收到其他与筹资活动有关的现金
+                    "subtotal_cash_financing",     //筹资活动现金流入小计
+                    "cash_paid_debt",     //偿还债务支付的现金
+                    "cash_paid_dpp",     //分配股利、利润或偿付利息所支付的现金
+                    "dp_paid_ms",     //其中：子公司支付给少数股东的股利、利润
+                    "other_cash_out_financing",     //支付其他与筹资活动有关的现金
+                    "subtotal_cash_out_financing",     //筹资活动现金流出小计
+                    "net_cash_flow_financing",     //筹资活动产生的现金流量净额
+                    "exchange_rate_cash",     //汇率变动对现金及现金等价物的影响
+                    "net_increase_cash",     //现金及现金等价物净增加额
+                    "cash_beginning",     //加:期初现金及现金等价物余额
+                    "cash_end",     //期末现金及现金等价物余额
+                    "net_profit",     //净利润
+                    "ms_equity",     //少数股东权益
+                    "uc_investment_loss",     //未确认的投资损失
+                    "impairment_of_assets",     //资产减值准备
+                    "depreciation_of_assets",     //固定资产折旧、油气资产折耗、生产性物资折旧
+                    "amort_intangible_assets",     //无形资产摊销
+                    "lt_deferred_exp_amort",     //长期待摊费用摊销
+                    "reduction_deferred_expenses",     //待摊费用的减少
+                    "incr_accrued_exp",     //预提费用的增加
+                    "disposal_of_assets",     //处置固定资产、无形资产和其他长期资产的损失
+                    "fx_asset_loss",     //固定资产报废损失
+                    "loss_fair_value",     //公允价值变动损失
+                    "deferred_income_increase",     //递延收益增加（减：减少）
+                    "estimated_liabilities",     //预计负债
+                    "financial_expenses",     //财务费用
+                    "investment_loss",     //投资损失
+                    "decr_def_inc_tax_assets",     //递延所得税资产减少
+                    "incr_def_inc_tax_liab",     //递延所得税负债增加
+                    "reduction_in_inventory",     //存货的减少
+                    "decr_oper_receivables",     //经营性应收项目的减少
+                    "incr_oper_payable",     //经营性应付项目的增加
+                    "redc_comp_unsettle",     //已完工尚未结算款的减少(减:增加)
+                    "incr_settle_unfinished",     //已结算尚未完工款的增加(减:减少)
+                    "other",     //其他
+                    "net_cash_flow_n",     //经营活动产生现金流量净额
+                    "conv_debt_into_cap",     //债务转为资本
+                    "conv_bonds_due_in_1year",     //一年内到期的可转换公司债券
+                    "financing_leased_fa",     //融资租入固定资产
+                    "ending_balance_of_cash",     //现金的期末余额
+                    "cash_beginning_balance",     //现金的期初余额
+                    "ending_cash_eq",     //现金等价物的期末余额
+                    "opening_cash_eq",     //现金等价物的期初余额
+                    "incr_net_cash_eq",     //现金及现金等价物的净增加额
+                ],
+                xpath:{
+                    path:"//table[@class='table']//tr[{0}]//td[{1}]",
+                    param:{
+                        type:"value",
+                        start:1,
+                        end:78,
+                        exclude:[2,3,14,27,44],
+                        child:{
+                            type:"group",
+                            start:2,
+                            end:5
+                        }
+                    }
+                }
+            }
+        ]
+    }
 }
 
 let finance ={
@@ -845,7 +1246,7 @@ let finance ={
                             start:3,
                             end:12,
                             append:[{index:1,
-                                name:"Date"
+                                name:"date"
                             }],
                             child:{
                                 type: "group",
@@ -1043,7 +1444,7 @@ let finance ={
      */
     getCashFlowStatment: async(code,year,company_type)=>{
         let options=cashFlowOptions[company_type];
-        return await digger(format(public.stock_profitstatement.url,code,year),options);
+        return await digger(format(public.stock_cashflowstatement.url,code,year),options);
     }
 }
 
