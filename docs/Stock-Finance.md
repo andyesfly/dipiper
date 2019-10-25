@@ -223,6 +223,7 @@
         <table>
             <thead><tr><th>参数</th><th>说明</th></tr></thead>
             <tbody>
+                <tr><td>date</td><td>日期</td></tr>
                 <tr style="font-weight: bold;"><td>asset</td><td>资产</td></tr>
                 <tr><td>cash_deposit</td><td>现金及存放中央银行款项</td></tr>
                 <tr><td>bank_deposit</td><td>存放同业款项</td></tr>
@@ -282,6 +283,7 @@
         <table>
             <thead><tr><th>参数</th><th>说明</th></tr></thead>
             <tbody>
+                <tr><td>date</td><td>日期</td></tr>
                 <tr style="font-weight: bold;"><td>asset</td><td>资产</td></tr>
                 <tr><td>money_funds</td><td>货币资金</td></tr>
                 <tr><td>withdrawal_of_funds</td><td>拆出资金</td></tr>
@@ -355,6 +357,7 @@
         <table>
             <thead><tr><th>参数</th><th>说明</th></tr></thead>
             <tbody>
+                <tr><td>date</td><td>日期</td></tr>
                 <tr style="font-weight: bold;"><td>asset</td><td>资产</td></tr>
                 <tr><td>money_funds</td><td>货币资金</td></tr>
                 <tr><td>customer_deposit</td><td>客户资金存款</td></tr>
@@ -419,6 +422,7 @@
         <table>
             <thead><tr><th>参数</th><th>说明</th></tr></thead>
             <tbody>
+                <tr><td>date</td><td>日期</td></tr>
                 <tr style="font-weight: bold;"><td>current_assets</td><td>流动资产</td></tr>
                 <tr><td>monetary_capital</td><td>货币资金</td></tr>
                 <tr><td>trading_fin_assets</td><td>交易性金融资产</td></tr>
@@ -510,13 +514,13 @@
 ## 利润表
 - 接口用途  
     获取个股利润表，根据行业划分，包括4类返回结果：银行、保险、证券、普通工商业
-- 接口调用说明
+- 接口调用说明 
     ``` javascript
         dip.stock.finance.getProfitStatment("000651","2018","bank").then(data=>{
             //数据存储、处理逻辑，请自行实现
         })
     ```
-- 参数说明
+- 参数说明 
     <table>
         <thead><tr><th>参数</th><th>说明</th></tr></thead>
         <tbody>
@@ -525,13 +529,16 @@
             <tr><td>company_type</td><td>公司类型（bank:银行，insurance:保险，security:证券，general）</td></tr>
         </tbody>
     </table>
-- 返回说明
+
+- 返回说明  
+    返回数据依旧是JSON格式，由于数据字段较多，这里不在给出返回数据实例，字段说明参考如下返回参数说明。
 
     返回参数说明
-    - 银行
+- 银行
     <table>
         <thead><tr><th>参数</th><th>说明</th></tr></thead>
         <tbody>
+            <tr><td>date</td><td>日期</td></tr>
             <tr><td>operating_income</td><td>营业收入</td></tr>
             <tr><td>net_interest_income</td><td>利息净收入</td></tr>
             <tr><td>interest_income</td><td>其中：利息收入</td></tr>
@@ -565,10 +572,12 @@
             <tr><td>t_compr_income_attr_ms</td><td>归属于少数股东的综合收益总额</td></tr>
         </tbody>
     </table>
-    - 保险
+
+- 保险
     <table>
     <thead><tr><th>参数</th><th>说明</th></tr></thead>
     <tbody>
+    <tr><td>date</td><td>日期</td></tr>
     <tr><td>operating_income</td><td>营业收入</td></tr>
     <tr><td>earned_premium</td><td>已赚保费</td></tr>
     <tr><td>prem_income</td><td>保费业务收入</td></tr>
@@ -610,10 +619,12 @@
     <tr><td>t_compr_income_attr_ms</td><td>归属于少数股东的综合收益总额</td></tr>
     </tbody>
     </table>
-    - 证券
+
+- 证券
     <table>
     <thead><tr><td>参数</td><td>说明</td></tr></thead>
     <tbody>
+    <tr><td>date</td><td>日期</td></tr>
     <tr><td>operating_income</td><td>营业收入</td></tr>
     <tr><td>n_fee_comm_income</td><td>手续费及佣金净收入</td></tr>
     <tr><td>n_sec_tb_income</td><td>代理买卖证券业务净收入</td></tr>
@@ -653,6 +664,7 @@
     <table>
     <thead><tr><td>参数</td><td>说明</td></tr></thead>
     <tbody>
+    <tr><td>date</td><td>日期</td></tr>
     <tr><td>total_income</td><td>营业总收入</td></tr>
     <tr><td>income</td><td>营业收入</td></tr>
     <tr><td>total_costs	</td><td>营业总成本</td></tr>
@@ -683,4 +695,362 @@
     <tr><td>t_compr_income_attr_ms</td><td>归属于少数股东的综合收益总额</td></tr>
     </tbody>
     </table>
-    
+
+## 现金流量表
+- 接口用途  
+    获取个股利现金流量表，根据行业划分，包括4类返回结果：银行、保险、证券、普通工商业
+- 接口调用说明 
+    ``` javascript
+        dip.stock.finance.getCashFlowStatment("600030","2019","security").then(data=>{
+            //数据存储、处理逻辑，请自行实现
+        })
+    ```
+- 参数说明 
+    <table>
+        <thead><tr><th>参数</th><th>说明</th></tr></thead>
+        <tbody>
+            <tr><td>code</td><td>股票代码（不带市场标识）</td></tr>
+            <tr><td>year</td><td>年份</td></tr>
+            <tr><td>company_type</td><td>公司类型（bank:银行，insurance:保险，security:证券，general）</td></tr>
+        </tbody>
+    </table>
+
+- 返回说明  
+    返回数据依旧是JSON格式，由于数据字段较多，这里不在给出返回数据实例，字段说明参考如下返回参数说明。
+
+    返回参数说明
+- 银行
+    <table>
+    <thead><tr><th>参数</th><th>说明</th></tr></thead>
+    <tbody>
+        <tr><td>date</td><td>日期</td></tr>
+        <tr><td>net_incr_deposits</td><td>客户存款和同业存放款项净增加额</td></tr>
+        <tr><td>net_incr_borrowing_ctbank</td><td>向央行借款净增加额</td></tr>
+        <tr><td>net_incr_borr_oth_fi</td><td>向其他金融机构拆入资金净增加额</td></tr>
+        <tr><td>cash_interest_commission</td><td>收取利息、手续费及佣金的现金</td></tr>
+        <tr><td>received_other_cash</td><td>收到其他与经营活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_in_op</td><td>经营活动现金流入小计</td></tr>
+        <tr><td>net_incr_cust_loans</td><td>客户贷款及垫款净增加额</td></tr>
+        <tr><td>deposit_net_incr</td><td>存放中央银行和同业款项净增加额</td></tr>
+        <tr><td>cash_for_employees</td><td>支付给职工以及为职工支付的现金</td></tr>
+        <tr><td>various_taxes_paid</td><td>支付的各项税费</td></tr>
+        <tr><td>other_pay</td><td>支付其他与经营活动有关的现金</td></tr>
+        <tr><td>pay_interest_commission</td><td>支付利息、手续费及佣金的现金</td></tr>
+        <tr><td>subtotal_cash_out</td><td>经营活动现金流出小计</td></tr>
+        <tr><td>net_cash_flow</td><td>经营活动产生的现金流量净额</td></tr>
+        <tr><td>cash_from_investment</td><td>收回投资收到的现金</td></tr>
+        <tr><td>cash_investment_income</td><td>取得投资收益收到的现金</td></tr>
+        <tr><td>net_cash_assets</td><td>处置固定资产、无形资产及其他资产而收到的现金</td></tr>
+        <tr><td>net_cash_subsidiaries</td><td>取得子公司及其他营业单位所收到的现金净额</td></tr>
+        <tr><td>other_cash_investment</td><td>收到其他与投资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_investment</td><td>投资活动现金流入小计</td></tr>
+        <tr><td>cash_paid_investment</td><td>投资所支付的现金</td></tr>
+        <tr><td>cash_paid_assets</td><td>购建固定资产、无形资产和其他长期资产支付的现金</td></tr>
+        <tr><td>other_cash_paid_investment</td><td>支付的其他与投资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_out_investment</td><td>投资活动现金流出小计</td></tr>
+        <tr><td>net_cash_flows_investing</td><td>投资活动产生的现金流量净额</td></tr>
+        <tr><td>cash_received_investment</td><td>吸收投资所收到的现金</td></tr>
+        <tr><td>cash_received_securitized</td><td>发行证券化资产所吸收的现金</td></tr>
+        <tr><td>cash_received_bonds</td><td>发行债券收到的现金</td></tr>
+        <tr><td>cash_received_capital</td><td>增加股本所收到的现金</td></tr>
+        <tr><td>cash_received_financing</td><td>收到其他与筹资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_financing</td><td>筹资活动现金流入小计</td></tr>
+        <tr><td>cash_paid_debt</td><td>偿还债务所支付的现金</td></tr>
+        <tr><td>cash_paid_dpp</td><td>分配股利、利润或偿付利息支付的现金</td></tr>
+        <tr><td>cash_paid_interest</td><td>其中:偿付利息所支付的现金</td></tr>
+        <tr><td>pay_ns_issuance</td><td>支付新股发行费用</td></tr>
+        <tr><td>other_cash_out_financing</td><td>支付其他与筹资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_out_financing</td><td>筹资活动现金流出小计</td></tr>
+        <tr><td>net_cash_flow_financing</td><td>筹资活动产生的现金流量净额</td></tr>
+        <tr><td>exchange_rate_cash</td><td>汇率变动对现金及现金等价物的影响</td></tr>
+        <tr><td>net_increase_cash</td><td>现金及现金等价物净增加额</td></tr>
+        <tr><td>cash_beginning</td><td>加:期初现金及现金等价物余额</td></tr>
+        <tr><td>cash_end</td><td>期末现金及现金等价物余额</td></tr>
+        <tr><td>net_profit</td><td>净利润</td></tr>
+        <tr><td>ms_equity</td><td>加:少数股东收益</td></tr>
+        <tr><td>impairment_of_assets</td><td>计提的资产减值准备</td></tr>
+        <tr><td>provision_bad_debts</td><td>其中：计提的坏账准备</td></tr>
+        <tr><td>provision_for_loan_loss</td><td>计提的贷款损失准备</td></tr>
+        <tr><td>rb_impairment_provision</td><td>冲回存放同业减值准备</td></tr>
+        <tr><td>depreciation_of_assets</td><td>固定资产折旧、油气资产折耗、生产性生物资产折旧</td></tr>
+        <tr><td>inv_prop_depreciation</td><td>投资性房地产折旧</td></tr>
+        <tr><td>amort_intangible_ado</td><td>无形资产、递延资产及其他资产的摊销</td></tr>
+        <tr><td>amort_intangible_assets</td><td>其中:无形资产摊销</td></tr>
+        <tr><td>lt_deferred_exp_amort</td><td>长期待摊费用摊销</td></tr>
+        <tr><td>lt_asset_amortization</td><td>长期资产摊销</td></tr>
+        <tr><td>disposal_of_assets</td><td>处置固定资产、无形资产和其他长期产的损失/(收益)</td></tr>
+        <tr><td>disposal_of_inv_prop</td><td>处置投资性房地产的损失/(收益)</td></tr>
+        <tr><td>fx_asset_loss</td><td>固定资产报废损失</td></tr>
+        <tr><td>financial_expenses</td><td>财务费用</td></tr>
+        <tr><td>investment_loss</td><td>投资损失(减:收益)</td></tr>
+        <tr><td>loss_fair_value</td><td>公允价值变动(收益)/损失</td></tr>
+        <tr><td>exchange_gains_losses</td><td>汇兑损益</td></tr>
+        <tr><td>net_gains_loss_derivative</td><td>衍生金融工具交易净损益</td></tr>
+        <tr><td>discounted_withdrawal</td><td>折现回拔(减值资产利息冲转)</td></tr>
+        <tr><td>reduction_in_inventory</td><td>存货的减少</td></tr>
+        <tr><td>reduction_in_loans</td><td>贷款的减少</td></tr>
+        <tr><td>increase_in_deposits</td><td>存款的增加</td></tr>
+        <tr><td>net_increase_in_borrowings</td><td>拆借款项的净增</td></tr>
+        <tr><td>reduction_financial_assets</td><td>金融性资产的减少</td></tr>
+        <tr><td>estimated_incr_liabilities</td><td>预计负债的增加</td></tr>
+        <tr><td>received_writeoffs</td><td>收到已核销款项</td></tr>
+        <tr><td>decr_def_inc_tax_assets</td><td>递延所得税资产的减少</td></tr>
+        <tr><td>incr_def_inc_tax_liab</td><td>递延所得税负债的增加</td></tr>
+        <tr><td>incr_oper_receivables</td><td>经营性应收项目的增加</td></tr>
+        <tr><td>incr_oper_payables</td><td>经营性应付项目的增加</td></tr>
+        <tr><td>decr_other_assets</td><td>经营性其他资产的减少</td></tr>
+        <tr><td>incr_other_liabilities</td><td>经营性其他负债的增加</td></tr>
+        <tr><td>other</td><td>其他</td></tr>
+        <tr><td>net_cash_flow_op</td><td>经营活动现金流量净额</td></tr>
+        <tr><td>repay_debts_with_fa</td><td>以固定资产偿还债务</td></tr>
+        <tr><td>repay_debts_with_inv</td><td>以投资偿还债务</td></tr>
+        <tr><td>invest_in_fa</td><td>以固定资产进行投资</td></tr>
+        <tr><td>conv_debt_into_cap</td><td>债务转为资本</td></tr>
+        <tr><td>convertible_bonds_in_1year</td><td>一年内到期的可转换公司债券</td></tr>
+        <tr><td>financing_leased_fa</td><td>融资租入固定资产</td></tr>
+        <tr><td>other_inv_fr_cash</td><td>其他不涉及现金收支的投资和筹资活动金额</td></tr>
+        <tr><td>ending_balance_of_cash</td><td>现金的期末余额</td></tr>
+        <tr><td>cash_beginning_balance</td><td>减:现金的期初余额</td></tr>
+        <tr><td>ending_cash_eq</td><td>现金等价物的期末余额</td></tr>
+        <tr><td>opening_cash_eq</td><td>减：现金等价物的期初余额</td></tr>
+        <tr><td>incr_net_cash_eq</td><td>现金及现金等价物净增加额</td></tr>
+    </tbody>
+    </table>
+- 保险
+    <table>
+    <thead><tr><th>参数</th><th>说明</th></tr></thead>
+    <tbody>
+        <tr><td>date</td><td>日期</td></tr>
+        <tr><td>prem_fr_orig_contr</td><td>收到原保险合同保费取得的现金 </td></tr>
+        <tr><td>n_reinsur_prem</td><td>收到再保业务现金净额 </td></tr>
+        <tr><td>other_cash_operating</td><td>收到其他与经营活动有关的现金 </td></tr>
+        <tr><td>n_incr_insured_dep</td><td>保户储金净增加额 </td></tr>
+        <tr><td>subtotal_cash_in_operating</td><td>经营活动现金流入小计 </td></tr>
+        <tr><td>c_pay_claims_orig_inco</td><td>支付原保险合同赔付款项的现金 </td></tr>
+        <tr><td>cash_for_employees</td><td>支付给职工以及为职工支付的现金 </td></tr>
+        <tr><td>pay_handling_chrg</td><td>支付手续费的现金 </td></tr>
+        <tr><td>various_taxes_paid</td><td>支付的各项税费 </td></tr>
+        <tr><td>other_pay</td><td>支付其他与经营活动有关的现金 </td></tr>
+        <tr><td>pay_policy_bonus</td><td>支付保单红利的现金 </td></tr>
+        <tr><td>subtotal_cash_out</td><td>经营活动现金流出小计 </td></tr>
+        <tr><td>net_cash_flow</td><td>经营活动产生的现金流量净额 </td></tr>
+        <tr><td>cash_from_investment</td><td>收回投资收到的现金 </td></tr>
+        <tr><td>cash_investment_income</td><td>取得投资收益收到的现金 </td></tr>
+        <tr><td>net_cash_assets</td><td>处置固定资产、无形资产和其他长期资产收回的现金净额 </td></tr>
+        <tr><td>net_cash_subsidiaries</td><td>处置子公司及其他营业单位收到的现金 </td></tr>
+        <tr><td>other_cash_investment</td><td>收到其他与投资活动有关的现金 </td></tr>
+        <tr><td>subtotal_cash_investment</td><td>投资活动现金流入小计 </td></tr>
+        <tr><td>cash_paid_investment</td><td>投资支付的现金 </td></tr>
+        <tr><td>net_incr_loans</td><td>质押贷款净增加额 </td></tr>
+        <tr><td>cash_paid_assets</td><td>购建固定资产、无形资产和其他长期资产支付的现金 </td></tr>
+        <tr><td>net_cash_paid_subsidiaries</td><td>购买子公司及其他营业单位支付的现金净额 </td></tr>
+        <tr><td>other_cash_paid_investment</td><td>支付其他与投资活动有关的现金 </td></tr>
+        <tr><td>subtotal_cash_out_investment</td><td>投资活动现金流出小计 </td></tr>
+        <tr><td>net_cash_flows_investing</td><td>投资活动产生的现金流量净额 </td></tr>
+        <tr><td>cash_received_investment</td><td>吸收投资收到的现金 </td></tr>
+        <tr><td>cash_received_loan</td><td>取得借款收到的现金 </td></tr>
+        <tr><td>cash_received_bonds</td><td>发行债券收到的现金 </td></tr>
+        <tr><td>cash_received_financing</td><td>收到其他与筹资活动有关的现金 </td></tr>
+        <tr><td>subtotal_cash_financing</td><td>筹资活动现金流入小计 </td></tr>
+        <tr><td>cash_paid_debt</td><td>偿还债务支付的现金 </td></tr>
+        <tr><td>cash_paid_dpp</td><td>分配股利、利润或偿付利息所支付的现金 </td></tr>
+        <tr><td>other_cash_out_financing</td><td>支付的其他与筹资活动有关的现金 </td></tr>
+        <tr><td>subtotal_cash_out_financing</td><td>筹资活动现金流出小计 </td></tr>
+        <tr><td>net_cash_flow_financing</td><td>筹资活动产生的现金流量净额 </td></tr>
+        <tr><td>exchange_rate_cash</td><td>汇率变动对现金及现金等价物的影响 </td></tr>
+        <tr><td>net_increase_cash</td><td>现金及现金等价物净增加额 </td></tr>
+        <tr><td>cash_beginning</td><td>加:期初现金及现金等价物余额 </td></tr>
+        <tr><td>cash_end</td><td>期末现金及现金等价物余额 </td></tr>
+        <tr><td>net_profit</td><td>净利润 </td></tr>
+        <tr><td>impairment_of_assets</td><td>加:计提(转回)资产减值准备 </td></tr>
+        <tr><td>estimated_liabilities</td><td>计提的预计负债 </td></tr>
+        <tr><td>net_liability_reserves</td><td>提取的各项保险责任准备金净额 </td></tr>
+        <tr><td>unexpired_liability_reserve</td><td>提取的未到期的责任准备金 </td></tr>
+        <tr><td>inv_prop_depreciation</td><td>投资性房地产折旧 </td></tr>
+        <tr><td>depreciation_of_assets</td><td>固定资产折旧、油气资产折耗、生产性生物资产折旧 </td></tr>
+        <tr><td>amort_ido_assets</td><td>无形资产、递延资产及其他资产摊销 </td></tr>
+        <tr><td>amort_intangible_assets</td><td>其中:无形资产摊销 </td></tr>
+        <tr><td>lt_deferred_exp_amort</td><td>长期待摊费用摊销 </td></tr>
+        <tr><td>lt_assets_exp_amort</td><td>长期资产摊销 </td></tr>
+        <tr><td>incr_accrued_exp</td><td>预提费用的增加 </td></tr>
+        <tr><td>disposal_of_assets</td><td>处置固定资产、无形资产和其他长期资产的损失(收益) </td></tr>
+        <tr><td>disposal_invest_prop</td><td>处置投资性房地产的收益 </td></tr>
+        <tr><td>investment_income</td><td>投资收益 </td></tr>
+        <tr><td>loss_fair_value</td><td>公允价值变动损失(收益) </td></tr>
+        <tr><td>automatic_premium_payment</td><td>自动垫缴保费收入 </td></tr>
+        <tr><td>interest_income</td><td>利息收入 </td></tr>
+        <tr><td>interest_expense</td><td>利息支出 </td></tr>
+        <tr><td>exchange_gains_losses</td><td>汇兑损失(收益) </td></tr>
+        <tr><td>incr_deposits_invest</td><td>保户储金及投资款的增加 </td></tr>
+        <tr><td>deferred_income_tax</td><td>递延所得税费用 </td></tr>
+        <tr><td>decr_def_inc_tax_assets</td><td>其中:递延所得税资产的减少(增加) </td></tr>
+        <tr><td>incr_def_inc_tax_liab</td><td>递延所得税负债的减少(增加) </td></tr>
+        <tr><td>decr_financial_assets</td><td>金融资产的减少 </td></tr>
+        <tr><td>incr_financial_liabilities</td><td>金融负债的增加 </td></tr>
+        <tr><td>decr_oper_receivables</td><td>经营性应收项目的减少(增加) </td></tr>
+        <tr><td>incr_oper_payable</td><td>经营性应付项目的增加(减少) </td></tr>
+        <tr><td>net_cash_flow_n</td><td>经营活动产生的现金流量净额<附表> </td></tr>
+        <tr><td>debt_with_assets</td><td>联营企业以资产抵偿其对本公司的债务 </td></tr>
+        <tr><td>replaced_shareholdings</td><td>少数股东以所持子公司股权置换为其对本公司的股权 </td></tr>
+        <tr><td>ending_balance_of_cash</td><td>现金的期末余额 </td></tr>
+        <tr><td>cash_beginning_balance</td><td>减:现金的期初余额 </td></tr>
+        <tr><td>ending_cash_eq</td><td>加:现金等价物的期末余额 </td></tr>
+        <tr><td>opening_cash_eq</td><td>减:现金等价物的期初余额 </td></tr>
+        <tr><td>incr_net_cash_eq</td><td>现金及现金等价物净增加/(减少)额 </td></tr>
+    </tbody>
+    </table>
+- 证券
+    <table>
+    <thead><tr><th>参数</th><th>说明</th></tr></thead>
+    <tbody>
+        <tr><td>date</td><td>日期</td></tr>
+        <tr><td>n_incr_disp_tfa</td><td>处置交易性金融资产净增加额</td></tr>
+        <tr><td>n_incr_disp_afa</td><td>处置可供出售金融资产净增加额</td></tr>
+        <tr><td>cash_interest_commission</td><td>收取利息、手续费及佣金的现金</td></tr>
+        <tr><td>n_incr_loans_oth_bank</td><td>拆入资金净增加额</td></tr>
+        <tr><td>n_incr_repurchase</td><td>回购业务资金净增加额</td></tr>
+        <tr><td>received_other_cash</td><td>收到的其他与经营活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_in_op</td><td>经营活动现金流入小计</td></tr>
+        <tr><td>cash_for_employees</td><td>支付给职工以及为职工支付的现金</td></tr>
+        <tr><td>various_taxes_paid</td><td>支付的各项税费</td></tr>
+        <tr><td>other_cash</td><td>支付其他与经营活动有关的现金</td></tr>
+        <tr><td>pay_interest_commission</td><td>支付利息、手续费及佣金的现金</td></tr>
+        <tr><td>subtotal_cash_out</td><td>经营活动现金流出小计</td></tr>
+        <tr><td>net_cash_flow</td><td>经营活动产生的现金流量净额</td></tr>
+        <tr><td>cash_from_investment</td><td>收回投资收到的现金</td></tr>
+        <tr><td>cash_investment_income</td><td>取得投资收益收到的现金</td></tr>
+        <tr><td>net_cash_assets</td><td>处置固定资产、无形资产及其他长期资产收回的现金净额</td></tr>
+        <tr><td>other_cash_investment</td><td>收到其他与投资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_investment</td><td>投资活动现金流入小计</td></tr>
+        <tr><td>cash_paid_investment</td><td>投资支付的现金</td></tr>
+        <tr><td>cash_paid_assets</td><td>购建固定资产、无形资产和其他长期资产支付的现金</td></tr>
+        <tr><td>other_cash_paid_investment</td><td>支付其他与投资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_out_investment</td><td>投资活动现金流出小计</td></tr>
+        <tr><td>net_cash_flows_investing</td><td>投资活动产生的现金流量净额</td></tr>
+        <tr><td>cash_received_investment</td><td>吸收投资收到的现金</td></tr>
+        <tr><td>cash_received_loan</td><td>取得借款收到的现金</td></tr>
+        <tr><td>cash_received_bonds</td><td>发行债券收到的现金</td></tr>
+        <tr><td>cash_received_financing</td><td>收到其他与筹资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_financing</td><td>筹资活动现金流入小计</td></tr>
+        <tr><td>cash_paid_debt</td><td>偿还债务支付的现金</td></tr>
+        <tr><td>cash_paid_dpp</td><td>分配股利、利润或偿付利息所支付的现金</td></tr>
+        <tr><td>other_cash_out_financing</td><td>支付其他与筹资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_out_financing</td><td>筹资活动现金流出小计</td></tr>
+        <tr><td>net_cash_flow_financing</td><td>筹资活动产生的现金流量净额</td></tr>
+        <tr><td>exchange_rate_cash</td><td>汇率变动对现金及现金等价物的影响</td></tr>
+        <tr><td>net_increase_cash</td><td>现金及现金等价物净增加额</td></tr>
+        <tr><td>cash_beginning</td><td>加:期初现金及现金等价物余额</td></tr>
+        <tr><td>cash_end</td><td>期末现金及现金等价物余额</td></tr>
+        <tr><td>net_profit</td><td>净利润</td></tr>
+        <tr><td>minority_interest_income</td><td>加:少数股东损益</td></tr>
+        <tr><td>impairment_of_assets</td><td>资产减值准备</td></tr>
+        <tr><td>risk_reserve_expenditure</td><td>风险准备金支出</td></tr>
+        <tr><td>depreciation_of_assets</td><td>固定资产折旧、油气资产折耗、生产性生物资产折旧</td></tr>
+        <tr><td>amort_ido_assets</td><td>无形资产、递延资产及其他资产摊销</td></tr>
+        <tr><td>amort_intangible_assets</td><td>其中:无形资产摊销</td></tr>
+        <tr><td>lt_deferred_exp_amort</td><td>长期待摊费用摊销</td></tr>
+        <tr><td>lt_assets_exp_amort</td><td>长期资产摊销</td></tr>
+        <tr><td>decr_deferred_exp</td><td>待摊费用减少(减:增加)</td></tr>
+        <tr><td>incr_accrued_exp</td><td>预提费用增加</td></tr>
+        <tr><td>disposal_of_assets</td><td>处置固定资产、无形资产和其他长期资产的损失</td></tr>
+        <tr><td>fx_asset_loss</td><td>固定资产报废损失</td></tr>
+        <tr><td>decr_financial_assets</td><td>金融资产的减少</td></tr>
+        <tr><td>incrin_fin_liab</td><td>各种金融负债的增加</td></tr>
+        <tr><td>loss_fair_value</td><td>公允价值变动损失</td></tr>
+        <tr><td>financial_expenses</td><td>财务费用</td></tr>
+        <tr><td>investment_loss</td><td>投资损失</td></tr>
+        <tr><td>exchange_gains_losses</td><td>汇兑损益/(损失)</td></tr>
+        <tr><td>decr_def_inc_tax_assets</td><td>递延所得税资产减少</td></tr>
+        <tr><td>incr_def_inc_tax_liab</td><td>递延所得税负债增加</td></tr>
+        <tr><td>reduction_in_inventory</td><td>存货的减少</td></tr>
+        <tr><td>decr_oper_receivables</td><td>经营性应收项目的减少</td></tr>
+        <tr><td>incr_oper_payable</td><td>经营性应付项目的增加</td></tr>
+        <tr><td>other</td><td>其他</td></tr>
+        <tr><td>net_cash_flow_n</td><td>经营活动产生的现金流量净额<附表></td></tr>
+        <tr><td>conv_debt_into_cap</td><td>债务转为资本</td></tr>
+        <tr><td>financing_leased_fa</td><td>融资租入固定资产</td></tr>
+        <tr><td>ending_balance_of_cash</td><td>现金的期末余额</td></tr>
+        <tr><td>cash_beginning_balance</td><td>减:现金的期初余额</td></tr>
+        <tr><td>ending_cash_eq</td><td>加:现金等价物的期末余额</td></tr>
+        <tr><td>opening_cash_eq</td><td>减:现金等价物的期初余额</td></tr>
+        <tr><td>incr_net_cash_eq</td><td>现金及现金等价物净增加额</td></tr>
+    </tbody>
+    </table>
+- 普通工商业
+    <table>
+    <thead><tr><th>参数</th><th>说明</th></tr></thead>
+    <tbody>
+        <tr><td>date</td><td>日期</td></tr>
+        <tr><td>cash_sale_services</td><td>销售商品、提供劳务收到的现金</td></tr>
+        <tr><td>tax_refund</td><td>收到的税费返还</td></tr>
+        <tr><td>other_cash_operating</td><td>收到的其他与经营活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_in_operating</td><td>经营活动现金流入小计</td></tr>
+        <tr><td>cash_for_goods_services</td><td>购买商品、接受劳务支付的现金</td></tr>
+        <tr><td>cash_for_employees</td><td>支付给职工以及为职工支付的现金</td></tr>
+        <tr><td>various_taxes_paid</td><td>支付的各项税费</td></tr>
+        <tr><td>other_pay</td><td>支付的其他与经营活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_out</td><td>经营活动现金流出小计</td></tr>
+        <tr><td>net_cash_flow</td><td>经营活动产生的现金流量净额</td></tr>
+        <tr><td>cash_from_investment</td><td>收回投资所收到的现金</td></tr>
+        <tr><td>cash_investment_income</td><td>取得投资收益所收到的现金</td></tr>
+        <tr><td>net_cash_assets</td><td>处置固定资产、无形资产和其他长期资产所收回的现金净额</td></tr>
+        <tr><td>net_cash_subsidiaries</td><td>处置子公司及其他营业单位收到的现金净额</td></tr>
+        <tr><td>other_cash_investment</td><td>收到的其他与投资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_investment</td><td>投资活动现金流入小计</td></tr>
+        <tr><td>cash_paid_assets</td><td>购建固定资产、无形资产和其他长期资产所支付的现金</td></tr>
+        <tr><td>cash_paid_investment</td><td>投资所支付的现金</td></tr>
+        <tr><td>net_cash_paid_subsidiaries</td><td>取得子公司及其他营业单位支付的现金净额</td></tr>
+        <tr><td>other_cash_paid_investment</td><td>支付的其他与投资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_out_investment</td><td>投资活动现金流出小计</td></tr>
+        <tr><td>net_cash_flows_investing</td><td>投资活动产生的现金流量净额</td></tr>
+        <tr><td>cash_received_investment</td><td>吸收投资收到的现金</td></tr>
+        <tr><td>cash_received_ms</td><td>其中：子公司吸收少数股东投资收到的现金</td></tr>
+        <tr><td>cash_received_loan</td><td>取得借款收到的现金</td></tr>
+        <tr><td>cash_received_bonds</td><td>发行债券收到的现金</td></tr>
+        <tr><td>cash_received_financing</td><td>收到其他与筹资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_financing</td><td>筹资活动现金流入小计</td></tr>
+        <tr><td>cash_paid_debt</td><td>偿还债务支付的现金</td></tr>
+        <tr><td>cash_paid_dpp</td><td>分配股利、利润或偿付利息所支付的现金</td></tr>
+        <tr><td>dp_paid_ms</td><td>其中：子公司支付给少数股东的股利、利润</td></tr>
+        <tr><td>other_cash_out_financing</td><td>支付其他与筹资活动有关的现金</td></tr>
+        <tr><td>subtotal_cash_out_financing</td><td>筹资活动现金流出小计</td></tr>
+        <tr><td>net_cash_flow_financing</td><td>筹资活动产生的现金流量净额</td></tr>
+        <tr><td>exchange_rate_cash</td><td>汇率变动对现金及现金等价物的影响</td></tr>
+        <tr><td>net_increase_cash</td><td>现金及现金等价物净增加额</td></tr>
+        <tr><td>cash_beginning</td><td>加:期初现金及现金等价物余额</td></tr>
+        <tr><td>cash_end</td><td>期末现金及现金等价物余额</td></tr>
+        <tr><td>net_profit</td><td>净利润</td></tr>
+        <tr><td>ms_equity</td><td>少数股东权益</td></tr>
+        <tr><td>uc_investment_loss</td><td>未确认的投资损失</td></tr>
+        <tr><td>impairment_of_assets</td><td>资产减值准备</td></tr>
+        <tr><td>depreciation_of_assets</td><td>固定资产折旧、油气资产折耗、生产性物资折旧</td></tr>
+        <tr><td>amort_intangible_assets</td><td>无形资产摊销</td></tr>
+        <tr><td>lt_deferred_exp_amort</td><td>长期待摊费用摊销</td></tr>
+        <tr><td>reduction_deferred_expenses</td><td>待摊费用的减少</td></tr>
+        <tr><td>incr_accrued_exp</td><td>预提费用的增加</td></tr>
+        <tr><td>disposal_of_assets</td><td>处置固定资产、无形资产和其他长期资产的损失</td></tr>
+        <tr><td>fx_asset_loss</td><td>固定资产报废损失</td></tr>
+        <tr><td>loss_fair_value</td><td>公允价值变动损失</td></tr>
+        <tr><td>deferred_income_increase</td><td>递延收益增加（减：减少）</td></tr>
+        <tr><td>estimated_liabilities</td><td>预计负债</td></tr>
+        <tr><td>financial_expenses</td><td>财务费用</td></tr>
+        <tr><td>investment_loss</td><td>投资损失</td></tr>
+        <tr><td>decr_def_inc_tax_assets</td><td>递延所得税资产减少</td></tr>
+        <tr><td>incr_def_inc_tax_liab</td><td>递延所得税负债增加</td></tr>
+        <tr><td>reduction_in_inventory</td><td>存货的减少</td></tr>
+        <tr><td>decr_oper_receivables</td><td>经营性应收项目的减少</td></tr>
+        <tr><td>incr_oper_payable</td><td>经营性应付项目的增加</td></tr>
+        <tr><td>redc_comp_unsettle</td><td>已完工尚未结算款的减少(减:增加)</td></tr>
+        <tr><td>incr_settle_unfinished</td><td>已结算尚未完工款的增加(减:减少)</td></tr>
+        <tr><td>other</td><td>其他</td></tr>
+        <tr><td>net_cash_flow_n</td><td>经营活动产生现金流量净额</td></tr>
+        <tr><td>conv_debt_into_cap</td><td>债务转为资本</td></tr>
+        <tr><td>conv_bonds_due_in_1year</td><td>一年内到期的可转换公司债券</td></tr>
+        <tr><td>financing_leased_fa</td><td>融资租入固定资产</td></tr>
+        <tr><td>ending_balance_of_cash</td><td>现金的期末余额</td></tr>
+        <tr><td>cash_beginning_balance</td><td>现金的期初余额</td></tr>
+        <tr><td>ending_cash_eq</td><td>现金等价物的期末余额</td></tr>
+        <tr><td>opening_cash_eq</td><td>现金等价物的期初余额</td></tr>
+        <tr><td>incr_net_cash_eq</td><td>现金及现金等价物的净增加额</td></tr>
+    </tbody>
+    </table>
