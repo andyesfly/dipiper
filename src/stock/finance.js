@@ -970,7 +970,6 @@ let cashFlowOptions={
                     "net_increase_cash",     //五、现金及现金等价物净增加额 
                     "cash_beginning",     //加:期初现金及现金等价物余额 
                     "cash_end",     //六、期末现金及现金等价物余额 
-                    "note",     //附注 
                     "net_profit",     //净利润 
                     "impairment_of_assets",     //加:计提(转回)资产减值准备 
                     "estimated_liabilities",     //计提的预计负债 
@@ -1064,11 +1063,10 @@ let cashFlowOptions={
                     "other_cash_out_financing",     //支付其他与筹资活动有关的现金
                     "subtotal_cash_out_financing",     //筹资活动现金流出小计
                     "net_cash_flow_financing",     //筹资活动产生的现金流量净额
-                    "exchange_rate_cash",     //四、汇率变动对现金及现金等价物的影响
-                    "net_increase_cash",     //五、现金及现金等价物净增加额
+                    "exchange_rate_cash",     //汇率变动对现金及现金等价物的影响
+                    "net_increase_cash",     //现金及现金等价物净增加额
                     "cash_beginning",     //加:期初现金及现金等价物余额
-                    "cash_end",     //六、期末现金及现金等价物余额
-                    "note",     //附注
+                    "cash_end",     //期末现金及现金等价物余额
                     "net_profit",     //净利润
                     "minority_interest_income",     //加:少数股东损益
                     "impairment_of_assets",     //资产减值准备
