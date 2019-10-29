@@ -50,17 +50,11 @@
       subMaxLevel: 3,
       search: {
         maxAge: 86400000, // Expiration time, the default one day
-        paths: [
-          '/',
-          '/Stock_Index',
-          '/Stock_Base',
-          '/Stock_Finance',
-          '/Stock_Trade'
-        ], // or 'auto'
+        paths: 'auto',
         placeholder: '搜索',
         noData: '找不到结果',
         // Headline depth, 1 - 6
-        depth: 2,
+        depth: 3,
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
         // To avoid search index collision
         // between multiple websites under the same domain
