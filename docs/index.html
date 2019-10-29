@@ -47,10 +47,29 @@
       name: 'dipiper',
       repo: 'andyesfly/dipiper',
       loadSidebar: true,
-      subMaxLevel: 3
+      subMaxLevel: 3,
+      search: {
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: [
+          '/',
+          '/Stock_Index',
+          '/Stock_Base',
+          '/Stock_Finance',
+          '/Stock_Trade'
+        ], // or 'auto'
+        placeholder: '搜索',
+        noData: '找不到结果',
+        // Headline depth, 1 - 6
+        depth: 2,
+        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+        // To avoid search index collision
+        // between multiple websites under the same domain
+        namespace: 'website-1',
+      }
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="//unpkg.com/docsify-copy-code"></script>
   <script src="//unpkg.com/prismjs/components/prism-php.min.js"></script>
