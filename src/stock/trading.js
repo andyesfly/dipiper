@@ -5,7 +5,7 @@
  *  Copyright (c) Hans Liu. All rights reserved.
  *  Licensed under the GPL-3.0 License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-const public = require("./public");
+const public = require("../common/public");
 const digger = require("../utils/digger");
 const format = require('string-format');
 const moment = require("moment");
