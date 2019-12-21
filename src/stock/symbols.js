@@ -6,7 +6,7 @@
  *  Licensed under the GPL-3.0 License. See License.txt in the project root for license information.
  *  股票列表、分类、发行等基础信息
  *--------------------------------------------------------------------------------------------*/
-const public = require("./public");
+const public = require("../common/public");
 const digger = require("../utils/digger");
 const format = require('string-format');
 
