@@ -37,9 +37,9 @@ const dip = require("../src/index");
 // dip.stock.finance.getGuideLine("000651","2018").then(data=>{
 //     console.log(JSON.stringify(data));
 // })
-// dip.stock.finance.getBalanceSheet("000651","2019","general").then(data=>{
-//     console.log(JSON.stringify(data));
-// })
-dip.stock.finance.getCashFlowStatment("600030","2019","security").then(data=>{
+dip.stock.finance.getBalanceSheet("600519","2018","general").then(data=>{
     console.log(JSON.stringify(data));
 })
+// dip.stock.finance.getCashFlowStatment("600030","2019","security").then(data=>{
+//     console.log(JSON.stringify(data));
+// })
