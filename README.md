@@ -19,7 +19,7 @@ dip.stock.symbols.getStockList().then((data)=>{
 })
 ```
 
-### [API文档](https://dipiper.tech/)
+### [API文档](http://dipiper.tech/)
 
 ### 交流反馈
 QQ群：383331051
