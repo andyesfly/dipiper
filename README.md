@@ -23,6 +23,3 @@ dip.stock.symbols.getStockList().then((data)=>{
 
 ### 交流反馈
 QQ群：383331051
-
----
-[滇ICP备16007768号-2](http://www.beian.miit.gov.cn)
