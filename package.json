@@ -8,11 +8,19 @@
     "license": "GPL-3.0",
     "dependencies": {
         "moment": "^2.24.0",
-        "puppeteer": "^1.20.0",
+        "puppeteer": "^3.0.1",
         "string-format": "^2.0.0"
     },
     "scripts": {
         "start": "node src/index.js ",
-        "test": "node test/test.js"
+        "test": "node test/test.js",
+        "docdev": "vuepress dev docs",
+        "docs:build": "vuepress build docs"
+    },
+    "devDependencies": {
+        "vuepress-plugin-autobar": "boboidream/vuepress-bar",
+        "vuepress-plugin-permalink-pinyin": "^1.0.0",
+        "vuepress-plugin-rpurl": "boboidream/vuepress-plugin-rpurl",
+        "vuepress-theme-reco": "^1.4.5"
     }
 }
