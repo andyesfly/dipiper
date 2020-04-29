@@ -5,12 +5,13 @@ const autobar_options = {
     navPrefix: "nav",
     skipEmptySidebar: true,
     skipEmptyNavbar: true,
-    multipleSideBar: true,
-    setHomepage: "hide" | "toGroup" | "top",
+    multipleSideBar: false,
+    setHomepage: "hide",
     pinyinNav: true
 };
 
 module.exports = {
+    // base: "/dipiper/",
     title: "dipiper",
     description: "一个基于 nodejs 的开源的财经数据接口包",
     head: [
