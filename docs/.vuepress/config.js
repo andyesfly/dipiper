@@ -15,16 +15,12 @@ module.exports = {
     title: "dipiper",
     description: "一个基于 nodejs 的开源的财经数据接口包",
     head: [
-        [
-            "link",
-            {
-                rel: "icon",
-                href: `./favicon.ico`
-            }
-        ]
+        ["link", { rel: "icon", href: `./favicon.ico` }],
+        ["script", { type: "text/javascript", src: "/js/baidutongji.js" }],
+        ["script", { type: "text/javascript", src: "/js/baidupush.js" }]
     ],
     dest: "./docs/.vuepress/dist",
-    plugins: ["permalink-pinyin", "rpurl", ["autobar", autobar_options]],
+    plugins: ["permalink-pinyin", "rpurl", ["autobar", autobar_options], ["@vuepress-reco/vuepress-plugin-loading-page", false]],
     theme: "reco",
     themeConfig: {
         author: "嘟嘟爸爸",
