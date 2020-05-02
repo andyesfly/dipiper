@@ -20,12 +20,18 @@ module.exports = {
         ["script", { type: "text/javascript", src: "/js/baidupush.js" }]
     ],
     dest: "./docs/.vuepress/dist",
-    plugins: ["permalink-pinyin", "rpurl", ["autobar", autobar_options], ["@vuepress-reco/vuepress-plugin-loading-page", false]],
-    theme: "reco",
+    plugins: ["@vuepress/back-to-top", "permalink-pinyin", "rpurl", ["autobar", autobar_options]],
+    theme: "antdocs",
     themeConfig: {
-        author: "嘟嘟爸爸",
+        ads: {
+            style: 3,
+            title: "赞助商",
+            btnText: "成为赞助商",
+            msgTitle: "成为赞助商",
+            msgText: "如果您有品牌推广、活动推广、招聘推广、社区合作等需求，欢迎联系我们，成为赞助商。您的广告将出现在 dipiper 文档侧边栏等页面。",
+            msgOkText: "确定"
+        },
         logo: "logo.png",
-        mode: "light",
         modePicker: false,
         nav: [
             { text: "首页", link: "/" },

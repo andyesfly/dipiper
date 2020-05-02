@@ -38,7 +38,7 @@ node_modules/
 jspm_packages/
 .vscode/
 test/
-
+docs/.vuepress/
 # TypeScript v1 declaration files
 typings/
 
