@@ -27,7 +27,7 @@ const data_source = {
             "http://push2.eastmoney.com/api/qt/slist/get?ut=fa5fd1943c7b386f172d6893dbfba10b&spt=3&pi=0&pz=5&po=1&fields=f12,f14&secid={0}.{1}&cb=jQuery183020305803724785165_1563292368596&_=1563292369095"
     },
     stock_board: {
-        url: "http://quote.eastmoney.com/center/sidemenu.json"
+        url: "http://quote.eastmoney.com/api/PageConfigs/sidemenus.json"
     },
     stock_boardele: {
         url:
