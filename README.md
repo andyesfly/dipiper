@@ -4,7 +4,7 @@
 
 从数据采集到数据可视化都用同一种开发语言——javascript，降低了学习成本，让我们专注于分析模型的研究。
 
-
+本接口包采用puppeteer作为爬虫内核，在安装的时候需要下载Chromium ，国内请使用淘宝镜像，否则会被墙，导致puppeteer无法安装成功
 
 ### 安装
 ` cnpm install dipiper --save `
@@ -19,7 +19,7 @@ dip.stock.symbols.getStockList().then((data)=>{
 })
 ```
 
-### [API文档](https://dipiper.tech/)
+### [API文档](http://dipiper.tech/)
 
 ### 交流反馈
 QQ群：383331051

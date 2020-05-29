@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "dipiper",
   "version": "1.0.10",
   "description": "基于nodejs的股票数据接口",
@@ -18,4 +19,34 @@
     "start": "node src/index.js ",
     "test": "node test/test.js"
   }
+=======
+    "name": "dipiper",
+    "version": "1.0.13",
+    "description": "基于nodejs的股票数据接口",
+    "main": "src/index.js",
+    "repository": "git@github.com:andyesfly/dipiper.git",
+    "author": "andyesfly <35127884@qq.com>",
+    "license": "GPL-3.0",
+    "dependencies": {
+        "moment": "^2.24.0",
+        "puppeteer": "3.1.0",
+        "string-format": "^2.0.0"
+    },
+    "scripts": {
+        "start": "node src/index.js ",
+        "test": "node test/test.js",
+        "docdev": "vuepress dev docs",
+        "docs:build": "vuepress build docs",
+        "deploy": "bash deploy.sh"
+    },
+    "devDependencies": {
+        "@vuepress/plugin-back-to-top": "^1.4.1",
+        "vuepress": "^1.4.1",
+        "vuepress-plugin-autobar": "boboidream/vuepress-bar",
+        "vuepress-plugin-permalink-pinyin": "^1.0.0",
+        "vuepress-plugin-rpurl": "boboidream/vuepress-plugin-rpurl",
+        "vuepress-theme-antdocs": "^1.0.1",
+        "vuepress-theme-reco": "^1.4.5"
+    }
+>>>>>>> 41bf9ecd13c70028b460016f6f26c5af3f478b4e
 }

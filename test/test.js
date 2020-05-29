@@ -4,6 +4,7 @@ const dip = require("../src/index");
 //     console.log(data);
 // });
 
+<<<<<<< HEAD
 // dip.stock.symbols.getBoards("600005").then((data)=>{
 //     console.log(JSON.stringify(data));
 // });
@@ -43,3 +44,12 @@ dip.stock.finance.getBalanceSheet("600519","2018","general").then(data=>{
 // dip.stock.finance.getCashFlowStatment("600030","2019","security").then(data=>{
 //     console.log(JSON.stringify(data));
 // })
+=======
+// stock.trading.getMonthHis("sh600005").then((data) => {
+//     console.log(data);
+// });
+
+dip.stock.fundflow.getStockTrendHis("sh600005").then((data) => {
+    console.log(data);
+});
+>>>>>>> 41bf9ecd13c70028b460016f6f26c5af3f478b4e
