@@ -1,25 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "dipiper",
-  "version": "1.0.10",
-  "description": "基于nodejs的股票数据接口",
-  "main": "src/index.js",
-  "repository": "git@github.com:andyesfly/dipiper.git",
-  "author": "andyesfly <35127884@qq.com>",
-  "license": "GPL-3.0",
-  "dependencies": {
-    "knex": "^0.20.0",
-    "moment": "^2.24.0",
-    "mssql": "^5.1.0",
-    "mysql": "^2.17.1",
-    "puppeteer": "^1.18.1",
-    "string-format": "^2.0.0"
-  },
-  "scripts": {
-    "start": "node src/index.js ",
-    "test": "node test/test.js"
-  }
-=======
     "name": "dipiper",
     "version": "1.0.13",
     "description": "基于nodejs的股票数据接口",
@@ -28,8 +7,11 @@
     "author": "andyesfly <35127884@qq.com>",
     "license": "GPL-3.0",
     "dependencies": {
+        "knex": "^0.20.0",
         "moment": "^2.24.0",
-        "puppeteer": "3.1.0",
+        "mssql": "^5.1.0",
+        "mysql": "^2.17.1",
+        "puppeteer": "^1.18.1",
         "string-format": "^2.0.0"
     },
     "scripts": {
@@ -48,5 +30,4 @@
         "vuepress-theme-antdocs": "^1.0.1",
         "vuepress-theme-reco": "^1.4.5"
     }
->>>>>>> 41bf9ecd13c70028b460016f6f26c5af3f478b4e
 }
