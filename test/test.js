@@ -8,6 +8,6 @@ const dip = require("../src/index");
 //     console.log(data);
 // });
 
-dip.stock.fundflow.getStockTrendHis("sh600005").then((data) => {
+dip.stock.symbols.getBoards("600005").then((data) => {
     console.log(data);
 });
