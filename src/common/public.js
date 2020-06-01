@@ -57,6 +57,9 @@ const data_source = {
     stock_fundflow: {
         num_url: "http://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/MoneyFlow.ssc_qsfx_zjlrqs?daima={0}",
         url: "http://vip.stock.finance.sina.com.cn/quotes_service/api/json_v2.php/MoneyFlow.ssl_qsfx_zjlrqs?page=1&num={0}&sort=opendate&asc=0&daima={1}"
+    },
+    stock_allot_profit: {
+        url: "https://money.finance.sina.com.cn/corp/go.php/vISSUE_ShareBonus/stockid/{0}.phtml"
     }
 };
 

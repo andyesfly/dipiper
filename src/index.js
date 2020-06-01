@@ -5,6 +5,7 @@ module.exports = {
         index: require("./stock/index"),
         symbols: require("./stock/symbols"),
         trading: require("./stock/trading"),
-        fundflow: require("./stock/fundflow")
+        fundflow: require("./stock/fundflow"),
+        allotProfit: require("./stock/allotProfit")
     }
 };
