@@ -11,23 +11,23 @@ const puppeteer = require("puppeteer");
 const format = require("string-format");
 
 const getAllotProfit = async (code) => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto(format(public.stock_allot_profit.url, code));
-  const res = await page.$$eval("#sharebonus_1 tbody tr", (els) =>
-    els.map((el) => {
-      const tds = el.querySelectorAll("td");
-      const tdVal = [];
-      for (let index = 0; index < tds.length; index++) {
-        const elt = tds[index];
-        if (elt.innerText !== "查看") {
-          tdVal.push(elt.innerText);
-        }
-      }
-      return tdVal;
-    })
-  );
-  return res;
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto(format(public.stock_allot_profit.url, code));
+    const res = await page.$$eval("#sharebonus_1 tbody tr", (els) =>
+        els.map((el) => {
+            const tds = el.querySelectorAll("td");
+            const tdVal = [];
+            for (let index = 0; index < tds.length; index++) {
+                const elt = tds[index];
+                if (elt.innerText !== "查看") {
+                    tdVal.push(elt.innerText);
+                }
+            }
+            return tdVal;
+        })
+    );
+    return res;
 };
 
 module.exports = { getAllotProfit };
